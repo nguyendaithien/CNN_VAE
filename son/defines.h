@@ -1,0 +1,40 @@
+#ifndef DEFINES_H
+#define DEFINES_H
+
+#define IMG_HEIGHT 28
+#define IMG_WIDTH 28
+#define K 3
+#define CONV1_HEIGHT IMG_HEIGHT 
+#define CONV1_WIDTH IMG_WIDTH
+#define CONV2_HEIGHT (IMG_HEIGHT/2)
+#define CONV2_WIDTH (IMG_WIDTH/2)
+#define CONV3_HEIGHT 8
+#define CONV3_WIDTH 8
+#define CONV4_HEIGHT 4
+#define CONV4_WIDTH 4
+#define POOL_SIZE 2
+#define POOL1_HEIGHT (CONV1_HEIGHT / POOL_SIZE)
+#define POOL1_WIDTH (CONV1_WIDTH / POOL_SIZE)
+#define POOL2_HEIGHT (CONV2_HEIGHT / POOL_SIZE)
+#define POOL2_WIDTH (CONV2_WIDTH / POOL_SIZE)
+#define POOL3_HEIGHT 4
+#define POOL3_WIDTH 4
+
+#define NUM_FILTERS_0 1
+#define NUM_FILTERS_1 16
+#define NUM_FILTERS_2 8
+#define NUM_FILTERS_3 8
+#define NUM_FILTERS_4 8
+#define NUM_FILTERS_5 8
+#define NUM_FILTERS_6 16
+#define NUM_FILTERS_7 1
+
+#define NUM_KERNEL_1 1
+#define NUM_KERNEL_2 16
+#define NUM_KERNEL_3 8
+#define NUM_KERNEL_4 8
+#define NUM_KERNEL_5 8
+#define NUM_KERNEL_6 8
+#define NUM_KERNEL_7 16
+
+#endif
