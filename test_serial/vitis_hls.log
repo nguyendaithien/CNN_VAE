@@ -1,0 +1,246 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source /tools/Xilinxs/Vitis/2019.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/tools/Xilinxs/Vitis/2019.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'snn' on host 'snn-HP-280-Pro-G8-Microtower-PC' (Linux_x86_64 version 5.15.0-91-generic) on Sun Jan 28 10:20:42 +07 2024
+INFO: [HLS 200-10] On os Ubuntu 20.04.6 LTS
+INFO: [HLS 200-10] In directory '/home/snn/cu_cai_2001/CNN_VAE/test_serial'
+Sourcing Tcl script 'run_hls.tcl'
+INFO: [HLS 200-10] Opening and resetting project '/home/snn/cu_cai_2001/CNN_VAE/test_serial/line_buffer_code_C'.
+INFO: [HLS 200-10] Adding design file 'model.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'test.cpp' to the project
+INFO: [HLS 200-10] Opening and resetting solution '/home/snn/cu_cai_2001/CNN_VAE/test_serial/line_buffer_code_C/solution1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flga2104-2-i'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.66ns.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../test.cpp in debug mode
+   Compiling ../../../../model.cpp in debug mode
+   Generating csim.exe
+ 0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0
+        0.649235 0.649235 0.649235 0.649235 0.653133 0.653133 0.653133 0.653133
+        0.649235 0.649235 0.649235 0.649235 0.653133 0.653133 0.653133 0.653133
+        0.649235 0.649235 0.649235 0.649235 0.653133 0.653133 0.653133 0.653133
+        0.649235 0.649235 0.649235 0.649235 0.653133 0.653133 0.653133 0.653133
+        0.647433 0.647433 0.647433 0.647433 0.647433 0.647433 0.647433 0.647433
+        0.647433 0.647433 0.647433 0.647433 0.647433 0.647433 0.647433 0.647433
+        0.647433 0.647433 0.647433 0.647433 0.647433 0.647433 0.647433 0.647433
+        0.647433 0.647433 0.647433 0.647433 0.647433 0.647433 0.647433 0.647433
+        0.647433 0.647433 0.647433 0.647433 0.647433 0.647433 0.647433 0.647433
+        0.647433 0.647433 0.647433 0.647433 0.647433 0.647433 0.647433 0.647433
+        0.647433 0.647433 0.647433 0.647433 0.647433 0.647433 0.647433 0.647433
+        0.647433 0.647433 0.647433 0.647433 0.647433 0.647433 0.647433 0.647433
+        0.647433 0.647433 0.647433 0.647433 0.647433 0.647433 0.647433 0.647433
+        0.647433 0.647433 0.647433 0.647433 0.647433 0.647433 0.647433 0.647433
+        0.647433 0.647433 0.647433 0.647433 0.647433 0.647433 0.647433 0.647433
+        0.647433 0.647433 0.647433 0.647433 0.647433 0.647433 0.647433 0.647433
+        0.506798 0.506798 0.506798 0.506798 0.503816 0.503816 0.503816 0.503816
+        0.506798 0.506798 0.506798 0.506798 0.503816 0.503816 0.503816 0.503816
+        0.506798 0.506798 0.506798 0.506798 0.503816 0.503816 0.503816 0.503816
+        0.506798 0.506798 0.506798 0.506798 0.503816 0.503816 0.503816 0.503816
+        0.502154 0.502154 0.502154 0.502154 0.502154 0.502154 0.502154 0.502154
+        0.502154 0.502154 0.502154 0.502154 0.502154 0.502154 0.502154 0.502154
+        0.502154 0.502154 0.502154 0.502154 0.502154 0.502154 0.502154 0.502154
+        0.502154 0.502154 0.502154 0.502154 0.502154 0.502154 0.502154 0.502154
+        0.502154 0.502154 0.502154 0.502154 0.502154 0.502154 0.502154 0.502154
+        0.502154 0.502154 0.502154 0.502154 0.502154 0.502154 0.502154 0.502154
+        0.502154 0.502154 0.502154 0.502154 0.502154 0.502154 0.502154 0.502154
+        0.502154 0.502154 0.502154 0.502154 0.502154 0.502154 0.502154 0.502154
+        0.502154 0.502154 0.502154 0.502154 0.502154 0.502154 0.502154 0.502154
+        0.502154 0.502154 0.502154 0.502154 0.502154 0.502154 0.502154 0.502154
+        0.502154 0.502154 0.502154 0.502154 0.502154 0.502154 0.502154 0.502154
+        0.502154 0.502154 0.502154 0.502154 0.502154 0.502154 0.502154 0.502154
+        0.622199 0.622199 0.622199 0.622199 0.622199 0.622199 0.622199 0.622199
+        0.622199 0.622199 0.622199 0.622199 0.622199 0.622199 0.622199 0.622199
+        0.622199 0.622199 0.622199 0.622199 0.622199 0.622199 0.622199 0.622199
+        0.622199 0.622199 0.622199 0.622199 0.622199 0.622199 0.622199 0.622199
+        0.622199 0.622199 0.622199 0.622199 0.622199 0.622199 0.622199 0.622199
+        0.622199 0.622199 0.622199 0.622199 0.622199 0.622199 0.622199 0.622199
+        0.622199 0.622199 0.622199 0.622199 0.622199 0.622199 0.622199 0.622199
+        0.622199 0.622199 0.622199 0.622199 0.622199 0.622199 0.622199 0.622199
+        0.622199 0.622199 0.622199 0.622199 0.622199 0.622199 0.622199 0.622199
+        0.622199 0.622199 0.622199 0.622199 0.622199 0.622199 0.622199 0.622199
+        0.622199 0.622199 0.622199 0.622199 0.622199 0.622199 0.622199 0.622199
+        0.622199 0.622199 0.622199 0.622199 0.622199 0.622199 0.622199 0.622199
+        0.622199 0.622199 0.622199 0.622199 0.622199 0.622199 0.622199 0.622199
+        0.622199 0.622199 0.622199 0.622199 0.622199 0.622199 0.622199 0.622199
+        0.285299 0.285299 0.285299 0.285299 0.285299 0.285299 0.285299 0.285299
+        0.285299 0.285299 0.285299 0.285299 0.285299 0.285299 0.285299 0.285299
+        0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0
+        /////////////////////////////////////////////////////// 
+ 0.0567197 0.0567197 0.0567197 0.0567197 0.0567197 0.0567197 0.0567197 0.0567197
+        0.0567197 0.0567197 0.0567197 0.0567197 0.0567197 0.0567197 0.0567197 0.0567197
+        0.0567197 0.0567197 0.0567197 0.0567197 0.0567197 0.0567197 0.0567197 0.0567197
+        0.0567197 0.0567197 0.0567197 0.0567197 0.0567197 0.0567197 0.0567197 0.0567197
+        0.0567197 0.0567197 0.0567197 0.0567197 0.0567197 0.0567197 0.0567197 0.0567197
+        0.0567197 0.0567197 0.0567197 0.0567197 0.0567197 0.0567197 0.0567197 0.0567197
+        0.0567197 0.0567197 0.0567197 0.0567197 0.0567197 0.0567197 0.0567197 0.0567197
+        0.0567197 0.0567197 0.0567197 0.0567197 0.0567197 0.0567197 0.0567197 0.0567197
+        0.439739 0.439739 0.439739 0.439739 0.439739 0.439739 0.439739 0.439739
+        0.439739 0.439739 0.439739 0.439739 0.439739 0.439739 0.439739 0.439739
+        0.439739 0.439739 0.439739 0.439739 0.439739 0.439739 0.439739 0.439739
+        0.439739 0.439739 0.439739 0.439739 0.439739 0.439739 0.439739 0.439739
+        0.439739 0.439739 0.439739 0.439739 0.439739 0.439739 0.439739 0.439739
+        0.439739 0.439739 0.439739 0.439739 0.439739 0.439739 0.439739 0.439739
+        0.439739 0.439739 0.439739 0.439739 0.439739 0.439739 0.439739 0.439739
+        0.439739 0.439739 0.439739 0.439739 0.439739 0.439739 0.439739 0.439739
+        0.593019 0.593019 0.593019 0.593019 0.593019 0.593019 0.593019 0.593019
+        0.593019 0.593019 0.593019 0.593019 0.593019 0.593019 0.593019 0.593019
+        0.593019 0.593019 0.593019 0.593019 0.593019 0.593019 0.593019 0.593019
+        0.593019 0.593019 0.593019 0.593019 0.593019 0.593019 0.593019 0.593019
+        0.593019 0.593019 0.593019 0.593019 0.593019 0.593019 0.593019 0.593019
+        0.593019 0.593019 0.593019 0.593019 0.593019 0.593019 0.593019 0.593019
+        0.593019 0.593019 0.593019 0.593019 0.593019 0.593019 0.593019 0.593019
+        0.593019 0.593019 0.593019 0.593019 0.593019 0.593019 0.593019 0.593019
+        0.133474 0.133474 0.133474 0.133474 0.133474 0.133474 0.133474 0.133474
+        0.133474 0.133474 0.133474 0.133474 0.133474 0.133474 0.133474 0.133474
+        0.133474 0.133474 0.133474 0.133474 0.133474 0.133474 0.133474 0.133474
+        0.133474 0.133474 0.133474 0.133474 0.133474 0.133474 0.133474 0.133474
+        0.133474 0.133474 0.133474 0.133474 0.133474 0.133474 0.133474 0.133474
+        0.133474 0.133474 0.133474 0.133474 0.133474 0.133474 0.133474 0.133474
+        0.133474 0.133474 0.133474 0.133474 0.133474 0.133474 0.133474 0.133474
+        0.133474 0.133474 0.133474 0.133474 0.133474 0.133474 0.133474 0.133474
+        0.140248 0.140248 0.140248 0.140248 0.140248 0.140248 0.140248 0.140248
+        0.140248 0.140248 0.140248 0.140248 0.140248 0.140248 0.140248 0.140248
+        0.140248 0.140248 0.140248 0.140248 0.140248 0.140248 0.140248 0.140248
+        0.140248 0.140248 0.140248 0.140248 0.140248 0.140248 0.140248 0.140248
+        0.140248 0.140248 0.140248 0.140248 0.140248 0.140248 0.140248 0.140248
+        0.140248 0.140248 0.140248 0.140248 0.140248 0.140248 0.140248 0.140248
+        0.140248 0.140248 0.140248 0.140248 0.140248 0.140248 0.140248 0.140248
+        0.140248 0.140248 0.140248 0.140248 0.140248 0.140248 0.140248 0.140248
+        0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0
+        0.285299 0.285299 0.285299 0.285299 0.285299 0.285299 0.285299 0.285299
+        0.285299 0.285299 0.285299 0.285299 0.285299 0.285299 0.285299 0.285299
+        0.285299 0.285299 0.285299 0.285299 0.285299 0.285299 0.285299 0.285299
+        0.285299 0.285299 0.285299 0.285299 0.285299 0.285299 0.285299 0.285299
+        0.285299 0.285299 0.285299 0.285299 0.285299 0.285299 0.285299 0.285299
+        0.285299 0.285299 0.285299 0.285299 0.285299 0.285299 0.285299 0.285299
+        0.285299 0.285299 0.285299 0.285299 0.285299 0.285299 0.285299 0.285299
+        0.285299 0.285299 0.285299 0.285299 0.285299 0.285299 0.285299 0.285299
+        0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0
+       INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-10] Analyzing design file 'model.cpp' ... 
+WARNING: [HLS 207-4088] using directive refers to implicitly-defined namespace 'std': ./CNN.h:5:17
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' target.
+INFO: [HLS 214-131] Inlining function 'relu(double)' into 'void convolution<double, double, double, double, 28, 28, 1, 16, 28, 28, 3, 3, 1, 1>(int, int, int, double*, double*, double const*, double*)' (./CNN.h:93:119)
+INFO: [HLS 214-131] Inlining function 'relu(double)' into 'void convolution<double, double, double, double, 14, 14, 16, 8, 14, 14, 3, 3, 1, 1>(int, int, int, double*, double*, double const*, double*)' (./CNN.h:93:119)
+INFO: [HLS 214-131] Inlining function 'relu(double)' into 'void convolution<double, double, double, double, 7, 7, 8, 8, 7, 7, 3, 3, 1, 1>(int, int, int, double*, double*, double const*, double*)' (./CNN.h:93:119)
+INFO: [HLS 214-131] Inlining function 'relu(double)' into 'void convolution<double, double, double, double, 4, 4, 8, 8, 4, 4, 3, 3, 1, 1>(int, int, int, double*, double*, double const*, double*)' (./CNN.h:93:119)
+INFO: [HLS 214-131] Inlining function 'relu(double)' into 'void convolution<double, double, double, double, 8, 8, 8, 8, 8, 8, 3, 3, 1, 1>(int, int, int, double*, double*, double const*, double*)' (./CNN.h:93:119)
+INFO: [HLS 214-131] Inlining function 'void max_pooling<double, double, 16, 28, 28, 14, 14, 2, 1>(int, int, double*, double*)' into 'CNN(int, int, int, double*, double*, double*, double*, double*, double*, double*, double*, double*, double*, double*)' (model.cpp:11:1)
+INFO: [HLS 214-131] Inlining function 'void upsampling<double, double, 8, 8, 8, 8, 8, 2, 2>(int, int, double*, double*)' into 'CNN(int, int, int, double*, double*, double*, double*, double*, double*, double*, double*, double*, double*, double*)' (model.cpp:19:1)
+INFO: [HLS 214-131] Inlining function 'void max_pooling<double, double, 8, 14, 14, 7, 7, 2, 1>(int, int, double*, double*)' into 'CNN(int, int, int, double*, double*, double*, double*, double*, double*, double*, double*, double*, double*, double*)' (model.cpp:13:1)
+INFO: [HLS 214-131] Inlining function 'void upsampling<double, double, 8, 4, 4, 8, 8, 2, 2>(int, int, double*, double*)' into 'CNN(int, int, int, double*, double*, double*, double*, double*, double*, double*, double*, double*, double*, double*)' (model.cpp:17:1)
+INFO: [HLS 214-131] Inlining function 'void max_pooling<double, double, 8, 7, 7, 4, 4, 2, 1>(int, int, double*, double*)' into 'CNN(int, int, int, double*, double*, double*, double*, double*, double*, double*, double*, double*, double*, double*)' (model.cpp:15:1)
+WARNING: [HLS 214-167] The program may have out of bound array access (./CNN.h:62:31)
+WARNING: [HLS 214-167] The program may have out of bound array access (./CNN.h:63:31)
+WARNING: [HLS 214-167] The program may have out of bound array access (./CNN.h:64:31)
+WARNING: [HLS 214-167] The program may have out of bound array access (./CNN.h:65:31)
+WARNING: [HLS 214-167] The program may have out of bound array access (./CNN.h:66:31)
+WARNING: [HLS 214-167] The program may have out of bound array access (./CNN.h:67:31)
+WARNING: [HLS 214-167] The program may have out of bound array access (./CNN.h:62:31)
+WARNING: [HLS 214-167] The program may have out of bound array access (./CNN.h:63:31)
+WARNING: [HLS 214-167] The program may have out of bound array access (./CNN.h:64:31)
+WARNING: [HLS 214-167] The program may have out of bound array access (./CNN.h:65:31)
+WARNING: [HLS 214-167] The program may have out of bound array access (./CNN.h:66:31)
+WARNING: [HLS 214-167] The program may have out of bound array access (./CNN.h:67:31)
+WARNING: [HLS 214-167] The program may have out of bound array access (./CNN.h:62:31)
+WARNING: [HLS 214-167] The program may have out of bound array access (./CNN.h:63:31)
+WARNING: [HLS 214-167] The program may have out of bound array access (./CNN.h:64:31)
+WARNING: [HLS 214-167] The program may have out of bound array access (./CNN.h:65:31)
+WARNING: [HLS 214-167] The program may have out of bound array access (./CNN.h:66:31)
+WARNING: [HLS 214-167] The program may have out of bound array access (./CNN.h:67:31)
+WARNING: [HLS 214-167] The program may have out of bound array access (./CNN.h:62:31)
+WARNING: [HLS 214-167] The program may have out of bound array access (./CNN.h:63:31)
+WARNING: [HLS 214-167] The program may have out of bound array access (./CNN.h:64:31)
+WARNING: [HLS 214-167] The program may have out of bound array access (./CNN.h:65:31)
+WARNING: [HLS 214-167] The program may have out of bound array access (./CNN.h:66:31)
+WARNING: [HLS 214-167] The program may have out of bound array access (./CNN.h:67:31)
+WARNING: [HLS 214-167] The program may have out of bound array access (./CNN.h:62:31)
+WARNING: [HLS 214-167] The program may have out of bound array access (./CNN.h:63:31)
+WARNING: [HLS 214-167] The program may have out of bound array access (./CNN.h:64:31)
+WARNING: [HLS 214-167] The program may have out of bound array access (./CNN.h:65:31)
+WARNING: [HLS 214-167] The program may have out of bound array access (./CNN.h:66:31)
+WARNING: [HLS 214-167] The program may have out of bound array access (./CNN.h:67:31)
+WARNING: [HLS 200-651] Found issues in source files:
+warning: ./CNN.h:62:31: The program may have out of bound array access
+warning: ./CNN.h:63:31: The program may have out of bound array access
+warning: ./CNN.h:64:31: The program may have out of bound array access
+warning: ./CNN.h:65:31: The program may have out of bound array access
+warning: ./CNN.h:66:31: The program may have out of bound array access
+warning: ./CNN.h:67:31: The program may have out of bound array access
+warning: ./CNN.h:62:31: The program may have out of bound array access
+warning: ./CNN.h:63:31: The program may have out of bound array access
+warning: ./CNN.h:64:31: The program may have out of bound array access
+warning: ./CNN.h:65:31: The program may have out of bound array access
+warning: ./CNN.h:66:31: The program may have out of bound array access
+warning: ./CNN.h:67:31: The program may have out of bound array access
+warning: ./CNN.h:62:31: The program may have out of bound array access
+warning: ./CNN.h:63:31: The program may have out of bound array access
+warning: ./CNN.h:64:31: The program may have out of bound array access
+warning: ./CNN.h:65:31: The program may have out of bound array access
+warning: ./CNN.h:66:31: The program may have out of bound array access
+warning: ./CNN.h:67:31: The program may have out of bound array access
+warning: ./CNN.h:62:31: The program may have out of bound array access
+warning: ./CNN.h:63:31: The program may have out of bound array access
+warning: ./CNN.h:64:31: The program may have out of bound array access
+warning: ./CNN.h:65:31: The program may have out of bound array access
+warning: ./CNN.h:66:31: The program may have out of bound array access
+warning: ./CNN.h:67:31: The program may have out of bound array access
+warning: ./CNN.h:62:31: The program may have out of bound array access
+warning: ./CNN.h:63:31: The program may have out of bound array access
+warning: ./CNN.h:64:31: The program may have out of bound array access
+warning: ./CNN.h:65:31: The program may have out of bound array access
+warning: ./CNN.h:66:31: The program may have out of bound array access
+warning: ./CNN.h:67:31: The program may have out of bound array access
+
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 936.875 ; gain = 525.918 ; free physical = 2091 ; free virtual = 28967
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 936.875 ; gain = 525.918 ; free physical = 2091 ; free virtual = 28967
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 936.875 ; gain = 525.918 ; free physical = 2089 ; free virtual = 28965
+INFO: [HLS 200-10] Checking synthesizability ...
+ERROR: [SYNCHK 200-21] ./CNN.h:153: The GCC/LLVM intrinsic function 'stacksave' is not supported, only a subset of intrinsics is supported, please check the coding style guide for more information.
+INFO: [SYNCHK 200-10] 1 error(s), 0 warning(s).
+ERROR: [HLS 200-70] Synthesizability check failed.
+command 'ap_source' returned error code
+    while executing
+"source run_hls.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel \#0 [list source $arg] "
+
+INFO: [Common 17-206] Exiting vitis_hls at Sun Jan 28 10:20:55 2024...
