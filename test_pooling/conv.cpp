@@ -91,7 +91,6 @@ void max_pooling(int width, int height, hls::stream<data_t> &in_pl1, hls::stream
     int count_pool1 =0;
     for (int pool_row = 0; pool_row < height; pool_row++) {
         for (int pool_col = 0; pool_col < width; pool_col++) {
-            #pragma HLS PIPELINE
             for (int num_filters = 0; num_filters < NUM_FILTERS_1; num_filters++) {
                 data_t temp = 0;
                 data_t in_pool_val = in_pl1.read();
@@ -99,7 +98,6 @@ void max_pooling(int width, int height, hls::stream<data_t> &in_pl1, hls::stream
                 if (pool_row >= K - 2) {
                     for (int pool_win_row = 0; pool_win_row < POOL_SIZE; pool_win_row++) {
                         for (int pool_win_col = 0; pool_win_col < POOL_SIZE; pool_win_col++) {
-                            #pragma HLS PIPELINE
                             if (pool_win_row < K - 2) {
                                 pool_win[num_filters][pool_win_row][pool_win_col] = (pool_win_col < K - 2) ? pool_win[num_filters][pool_win_row][pool_win_col + 1] : pool_buf[num_filters][pool_col];
                             } else if (pool_win_row == K - 2) {

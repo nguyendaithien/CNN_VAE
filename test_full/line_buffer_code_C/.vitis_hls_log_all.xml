@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog>
+        <logs message="ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***" projectName="line_buffer_code_C" solutionName="solution1" date="2024-01-28T14:55:52.277+0700"/>
+        <logs message="ERROR: [COSIM 212-5] *** C/RTL co-simulation file generation failed. ***" projectName="line_buffer_code_C" solutionName="solution1" date="2024-01-28T14:55:52.256+0700"/>
+        <logs message="ERROR: [COSIM 212-320] C TB testing failed, stop generating test vectors. Please check C TB or re-run cosim." projectName="line_buffer_code_C" solutionName="solution1" date="2024-01-28T14:55:52.252+0700"/>
+        <logs message="ERROR: [COSIM 212-360] Aborting co-simulation: C TB simulation failed." projectName="line_buffer_code_C" solutionName="solution1" date="2024-01-28T14:55:52.248+0700"/>
+        <logs message="ERROR: System recieved a signal named SIGSEGV and the program has to stop immediately!&#xA;This signal was generated when a program tries to read or write outside the memory that is allocated for it, or to write memory that can only be read.&#xA;Possible cause of this problem may be: 1) the depth setting of pointer type argument is much larger than it needed; 2)insufficient depth of array argument; 3)null pointer etc.&#xA;Current execution stopped during CodeState = DELETE_CHAR_BUFFERS.&#xA;You can search CodeState variable name in apatb*.cpp file under ./sim/wrapc dir to locate the position.&#xA;&#xA;" projectName="line_buffer_code_C" solutionName="solution1" date="2024-01-28T14:55:52.244+0700"/>
+        <logs message="ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***" projectName="line_buffer_code_C" solutionName="solution1" date="2024-01-28T14:53:09.678+0700"/>
+        <logs message="ERROR: [COSIM 212-5] *** C/RTL co-simulation file generation failed. ***" projectName="line_buffer_code_C" solutionName="solution1" date="2024-01-28T14:53:09.655+0700"/>
+        <logs message="ERROR: [COSIM 212-320] C TB testing failed, stop generating test vectors. Please check C TB or re-run cosim." projectName="line_buffer_code_C" solutionName="solution1" date="2024-01-28T14:53:09.650+0700"/>
+        <logs message="ERROR: [COSIM 212-360] Aborting co-simulation: C TB simulation failed." projectName="line_buffer_code_C" solutionName="solution1" date="2024-01-28T14:53:09.646+0700"/>
+        <logs message="ERROR: System recieved a signal named SIGSEGV and the program has to stop immediately!&#xA;This signal was generated when a program tries to read or write outside the memory that is allocated for it, or to write memory that can only be read.&#xA;Possible cause of this problem may be: 1) the depth setting of pointer type argument is much larger than it needed; 2)insufficient depth of array argument; 3)null pointer etc.&#xA;Current execution stopped during CodeState = DELETE_CHAR_BUFFERS.&#xA;You can search CodeState variable name in apatb*.cpp file under ./sim/wrapc dir to locate the position.&#xA;&#xA;" projectName="line_buffer_code_C" solutionName="solution1" date="2024-01-28T14:53:09.641+0700"/>
+      </simLog>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'convolution&lt;double, double, double, double, 28, 28, 1, 16, 28, 28, 3, 3, 1, 1>' to 'convolution_double_double_double_double_28_28_1_16_28_28_3_3_1_1_s'." projectName="line_buffer_code_C" solutionName="solution1" date="2024-01-28T14:52:53.883+0700" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'convolution&lt;double, double, double, double, 28, 28, 1, 16, 28, 28, 3, 3, 1, 1>_Pipeline_Shift_win_right' to 'convolution_double_double_double_double_28_28_1_16_28_28_3_3_1_1_Pipeline_Shift_win_right'." projectName="line_buffer_code_C" solutionName="solution1" date="2024-01-28T14:52:53.876+0700" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'convolution&lt;double, double, double, double, 28, 28, 1, 16, 28, 28, 3, 3, 1, 1>_Pipeline_VITIS_LOOP_42_3' to 'convolution_double_double_double_double_28_28_1_16_28_28_3_3_1_1_Pipeline_VITIS_LOOP_42_3'." projectName="line_buffer_code_C" solutionName="solution1" date="2024-01-28T14:52:53.871+0700" type="Warning"/>
+        <logs message="WARNING: [HLS 200-960] Cannot flatten loop 'Push_pixel' (./CNN.h:41:22) in function 'convolution&lt;double, double, double, double, 28, 28, 1, 16, 28, 28, 3, 3, 1, 1>' more than one sub loop.&#xA;Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-960.html" projectName="line_buffer_code_C" solutionName="solution1" date="2024-01-28T14:52:53.798+0700" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

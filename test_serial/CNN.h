@@ -2,12 +2,7 @@
 #include<hls_stream.h>
 #include<stdint.h>
 
-using namespace std;
-typedef double data_t;
-// top module CNN
-//void CNN( int padding, int width, int hight,  hls::stream<double> &image, hls::stream<data_t> &output, hls::stream<data_t> &output_pooling_1,hls::stream<data_t> &output_conv2,hls::stream<data_t> &output_pooling2,hls::stream<data_t> &output_conv3,hls::stream<data_t> &output_pooling3 );
-void CNN( int padding, int width, int hight,  double *image, double *output, double *output_pooling1, double *output_conv2, double *output_pooling2, double *output_conv3, double *output_pooling3,double 
-		*output_conv4, data_t *output_upsampling1, data_t *output_conv5, data_t *output_upsampling2, data_t *output_conv6, data_t *output_upsampling3, data_t *output_conv7);
+void CNN( int padding, int width, int hight,  data_t *image, data_t *output, data_t *output_pooling1, data_t *output_conv2, data_t *output_pooling2, data_t *output_conv3, data_t *output_pooling3,data_t *output_conv4, data_t *output_upsampling1, data_t *output_conv5, data_t *output_upsampling2, data_t *output_conv6, data_t *output_upsampling3, data_t *output_conv7);
 
 
 // relu function
@@ -31,7 +26,7 @@ template <typename INPUT_DATA_TYPE
 	 ,int CONV_STRICE
 	 ,int CONV_PADDING_SIZE
 	 >
-void convolution( int padding, int width, int hight ,INPUT_DATA_TYPE bias[CONV_NUM_CHANNEL], data_t *image, const KERNEL_TYPE *kernel,OUTPUT_DATA_TYPE *output) {
+static void convolution( int padding, int width, int hight ,INPUT_DATA_TYPE bias[CONV_NUM_CHANNEL], data_t *image, const KERNEL_TYPE *kernel,OUTPUT_DATA_TYPE *output) {
  hight = CONV_DATA_YSIZE + 2*CONV_PADDING_SIZE;
  width = CONV_DATA_XSIZE + 2*padding;
    
@@ -139,8 +134,6 @@ static void max_pooling(int width, int height, DATA_IN_TYPE *input, DATA_OUT_TYP
         }
     }
 }
-
-
 template <typename DATA_IN_TYPE,
           typename DATA_OUT_TYPE,
           int NUM_CHANNEL,
@@ -150,17 +143,21 @@ template <typename DATA_IN_TYPE,
           int DATA_OUT_YSIZE,
           int UPSAMPLING_FACTOR_X,
           int UPSAMPLING_FACTOR_Y>
-void upsampling(int width, int height, DATA_IN_TYPE *in_us1, DATA_OUT_TYPE *out_us1) {
+static void upsampling(int width, int height, DATA_IN_TYPE* input, DATA_OUT_TYPE* output) {
     DATA_IN_TYPE upsam_buf[UPSAMPLING_FACTOR_Y * width];
-
     for (int num_channel = 0; num_channel < NUM_CHANNEL; num_channel++) {
         for (int i = 0; i < UPSAMPLING_FACTOR_X * height; i++) {
             for (int j = 0; j < UPSAMPLING_FACTOR_Y * width; j++) {
                 if (i % 2 == 0) {
-                    upsam_buf[j / 2] = in_us1[num_channel * DATA_IN_XSIZE * DATA_IN_YSIZE + (i / 2) * DATA_IN_XSIZE + (j / UPSAMPLING_FACTOR_Y)];
-                    out_us1[num_channel * DATA_OUT_XSIZE * DATA_OUT_YSIZE + i * DATA_OUT_XSIZE + j] = upsam_buf[j / 2];
+                    if (j % 2 == 0) {
+                        upsam_buf[j / 2] = input[num_channel * DATA_IN_XSIZE * DATA_IN_YSIZE + i / 2 * DATA_IN_XSIZE + j / 2];
+                        output[num_channel * DATA_OUT_XSIZE * DATA_OUT_YSIZE + i * UPSAMPLING_FACTOR_Y * width + j] = upsam_buf[j / 2];
+                    } else {
+                        output[num_channel * DATA_OUT_XSIZE * DATA_OUT_YSIZE + i * UPSAMPLING_FACTOR_Y * width + j] = output[num_channel * DATA_OUT_XSIZE * DATA_OUT_YSIZE + i * UPSAMPLING_FACTOR_Y * width + (j - 1)];
+                    }
                 } else {
-                    out_us1[num_channel * DATA_OUT_XSIZE * DATA_OUT_YSIZE + i * DATA_OUT_XSIZE + j] = out_us1[num_channel * DATA_OUT_XSIZE * DATA_OUT_YSIZE + (i - 1) * DATA_OUT_XSIZE + j];
+                    output[num_channel * DATA_OUT_XSIZE * DATA_OUT_YSIZE + i * UPSAMPLING_FACTOR_Y * width + j] =
+                        output[num_channel * DATA_OUT_XSIZE * DATA_OUT_YSIZE + (i - 1) * UPSAMPLING_FACTOR_Y * width + j];
                 }
             }
         }

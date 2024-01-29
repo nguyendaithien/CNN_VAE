@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog>
+        <logs message="ERROR: [HLS 200-70] Synthesizability check failed." projectName="line_buffer_code_C" solutionName="solution1" date="2024-01-28T13:33:57.560+0700"/>
+        <logs message="ERROR: [SYNCHK 200-21] ./CNN.h:149: The GCC/LLVM intrinsic function 'stacksave' is not supported, only a subset of intrinsics is supported, please check the coding style guide for more information." projectName="line_buffer_code_C" solutionName="solution1" date="2024-01-28T13:33:57.556+0700"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [HLS 207-5287] unused parameter 'output_conv7' (model.cpp:9:160)" projectName="line_buffer_code_C" solutionName="solution1" date="2024-01-28T13:33:53.270+0700" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>
