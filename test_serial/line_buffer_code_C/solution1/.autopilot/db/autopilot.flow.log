@@ -1,4 +1,4 @@
-INFO-FLOW: Workspace /home/edabk/cu_cai_2k1/CNN_VAE/test_serial/line_buffer_code_C/solution1 opened at Sun Jan 28 18:24:08 +07 2024
+INFO-FLOW: Workspace /home/edabk/cu_cai_2k1/CNN_VAE/test_serial/line_buffer_code_C/solution1 opened at Mon Jan 29 09:48:14 +07 2024
 Execute       send_msg_by_id INFO @200-1505@%s%s default  vivado 
 INFO: [HLS 200-1505] Using default flow_target 'vivado'
 Execute       get_config_interface -m_axi_latency 
@@ -15,7 +15,7 @@ DBG:HLSDevice: init success
 Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/dsp48.hlp 
 Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/virtexuplus_dsp48e2.hlp 
 INFO: [HLS 200-1611] Setting target device to 'xcvu9p-flga2104-2-i'
-Command       create_platform done; 1.02 sec.
+Command       create_platform done; 0.99 sec.
 Execute       source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/common/xilinx.gen 
 Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/plb46.gen 
 Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/axi4.gen 
@@ -31,7 +31,7 @@ Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/i
 Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/dsp48.gen 
 Execute       ap_part_info -name xcvu9p-flga2104-2-i -data info 
 Execute       config_compile -quiet -complex-mul-dsp=0 
-Command     set_part done; 1.11 sec.
+Command     set_part done; 1.09 sec.
 Execute     create_clock -period 6.66 
 INFO: [HLS 200-1510] Running: create_clock -period 6.66 
 Execute       ap_set_clock -name default -period 6.66 -default=false 
@@ -43,10 +43,11 @@ INFO: [SIM 211-2] *************** CSIM start ***************
 INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
 Execute       ap_part_info -name xcvu9p-flga2104-2-i -data info 
 Execute       source run_sim.tcl 
+Command       ap_source done; 0.11 sec.
 INFO: [SIM 211-1] CSim done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
-Command     csim_design done; 0.91 sec.
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1.56 seconds. CPU system time: 0.26 seconds. Elapsed time: 0.91 seconds; current allocated memory: 0.000 MB.
+Command     csim_design done; 1.01 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1.64 seconds. CPU system time: 0.37 seconds. Elapsed time: 1.01 seconds; current allocated memory: 0.000 MB.
 Execute     csynth_design 
 INFO: [HLS 200-1510] Running: csynth_design 
 Execute       get_config_compile -effort 
@@ -61,7 +62,7 @@ Execute       get_config_compile -skip_transform
 Execute       get_config_compile -pre_tcl 
 Execute       get_config_compile -keep_printf 
 Execute       elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.117 GB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0 seconds; current allocated memory: 1.117 GB.
 INFO: [HLS 200-10] Analyzing design file 'model.cpp' ... 
 INFO-FLOW: Compiling one TU...
 Execute         get_config_compile -pragma_strict_mode 
@@ -70,7 +71,7 @@ Execute         ap_part_info -name xcvu9p-flga2104-2-i -data info
 INFO-FLOW: Running: GCC PP 39
 INFO-FLOW: Source preprocessing
 Execute         ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/clang model.cpp -foptimization-record-file=/home/edabk/cu_cai_2k1/CNN_VAE/test_serial/line_buffer_code_C/solution1/.autopilot/db/model.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -gcc-toolchain /tools/Xilinx/Vitis_HLS/2021.2/tps/lnx64/gcc-6.2.0 -fhls -fno-exceptions -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot -I /tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -I /usr/include/x86_64-linux-gnu -o /home/edabk/cu_cai_2k1/CNN_VAE/test_serial/line_buffer_code_C/solution1/.autopilot/db/model.pp.0.cpp -hls-platform-db-name=/tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium > /home/edabk/cu_cai_2k1/CNN_VAE/test_serial/line_buffer_code_C/solution1/.autopilot/db/model.cpp.clang.out.log 2> /home/edabk/cu_cai_2k1/CNN_VAE/test_serial/line_buffer_code_C/solution1/.autopilot/db/model.cpp.clang.err.log 
-INFO-FLOW: Done: GCC PP 39 time: 0.1 seconds per iteration
+INFO-FLOW: Done: GCC PP 39 time: 0 seconds per iteration
 Execute         set_directive_top CNN -name=CNN 
 Execute         source /tools/Xilinx/Vitis_HLS/2021.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
 Execute         source /tools/Xilinx/Vitis_HLS/2021.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
@@ -98,7 +99,7 @@ Execute         ap_part_info -name xcvu9p-flga2104-2-i -data info
 INFO-FLOW: compiling source code to llvm bc
 Execute         ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/edabk/cu_cai_2k1/CNN_VAE/test_serial/line_buffer_code_C/solution1/.autopilot/db/model.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing /home/edabk/cu_cai_2k1/CNN_VAE/test_serial/line_buffer_code_C/solution1/.autopilot/db/model.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot -I /tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /home/edabk/cu_cai_2k1/CNN_VAE/test_serial/line_buffer_code_C/solution1/.autopilot/db/model.bc -hls-platform-db-name=/tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium > /home/edabk/cu_cai_2k1/CNN_VAE/test_serial/line_buffer_code_C/solution1/.autopilot/db/model.pp.0.cpp.clang.out.log 2> /home/edabk/cu_cai_2k1/CNN_VAE/test_serial/line_buffer_code_C/solution1/.autopilot/db/model.pp.0.cpp.clang.err.log 
 WARNING: [HLS 207-5287] unused parameter 'output_conv7' (model.cpp:8:393)
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.45 seconds. CPU system time: 0.2 seconds. Elapsed time: 0.49 seconds; current allocated memory: 208.773 MB.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.31 seconds. CPU system time: 0.19 seconds. Elapsed time: 0.49 seconds; current allocated memory: 208.773 MB.
 INFO-FLOW: Linking Debug ...
 INFO-FLOW: Linking dut bc code.
 Execute         run_link_or_opt -out /home/edabk/cu_cai_2k1/CNN_VAE/test_serial/line_buffer_code_C/solution1/.autopilot/db/a.g.ld.0.bc -args  "/home/edabk/cu_cai_2k1/CNN_VAE/test_serial/line_buffer_code_C/solution1/.autopilot/db/model.g.bc"  
@@ -110,14 +111,14 @@ INFO-FLOW:
 INFO-FLOW: Linking math bc lib
 Execute         run_link_or_opt -out /home/edabk/cu_cai_2k1/CNN_VAE/test_serial/line_buffer_code_C/solution1/.autopilot/db/a.g.ld.2.m1.bc -args /home/edabk/cu_cai_2k1/CNN_VAE/test_serial/line_buffer_code_C/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /tools/Xilinx/Vitis_HLS/2021.2/lnx64/lib/libhlsm_39.bc /tools/Xilinx/Vitis_HLS/2021.2/lnx64/lib/libhlsmc++_39.bc 
 Execute           ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/edabk/cu_cai_2k1/CNN_VAE/test_serial/line_buffer_code_C/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /tools/Xilinx/Vitis_HLS/2021.2/lnx64/lib/libhlsm_39.bc /tools/Xilinx/Vitis_HLS/2021.2/lnx64/lib/libhlsmc++_39.bc -o /home/edabk/cu_cai_2k1/CNN_VAE/test_serial/line_buffer_code_C/solution1/.autopilot/db/a.g.ld.2.m1.bc > /home/edabk/cu_cai_2k1/CNN_VAE/test_serial/line_buffer_code_C/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.out.log 2> /home/edabk/cu_cai_2k1/CNN_VAE/test_serial/line_buffer_code_C/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.err.log 
-Command           ap_eval done; 2.05 sec.
+Command           ap_eval done; 1.95 sec.
 INFO-FLOW: 
-Command         run_link_or_opt done; 2.05 sec.
+Command         run_link_or_opt done; 1.95 sec.
 Execute         run_link_or_opt -opt -out /home/edabk/cu_cai_2k1/CNN_VAE/test_serial/line_buffer_code_C/solution1/.autopilot/db/a.g.ld.3.fpc.bc -args /home/edabk/cu_cai_2k1/CNN_VAE/test_serial/line_buffer_code_C/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=CNN -reflow-float-conversion 
 Execute           ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/edabk/cu_cai_2k1/CNN_VAE/test_serial/line_buffer_code_C/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.diag.yml /home/edabk/cu_cai_2k1/CNN_VAE/test_serial/line_buffer_code_C/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=CNN -reflow-float-conversion -o /home/edabk/cu_cai_2k1/CNN_VAE/test_serial/line_buffer_code_C/solution1/.autopilot/db/a.g.ld.3.fpc.bc > /home/edabk/cu_cai_2k1/CNN_VAE/test_serial/line_buffer_code_C/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.out.log 2> /home/edabk/cu_cai_2k1/CNN_VAE/test_serial/line_buffer_code_C/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.err.log 
-Command           ap_eval done; 0.71 sec.
+Command           ap_eval done; 0.7 sec.
 INFO-FLOW: 
-Command         run_link_or_opt done; 0.71 sec.
+Command         run_link_or_opt done; 0.7 sec.
 Execute         run_link_or_opt -out /home/edabk/cu_cai_2k1/CNN_VAE/test_serial/line_buffer_code_C/solution1/.autopilot/db/a.g.ld.4.m2.bc -args /home/edabk/cu_cai_2k1/CNN_VAE/test_serial/line_buffer_code_C/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /tools/Xilinx/Vitis_HLS/2021.2/lnx64/lib/libfloatconversion_39.bc 
 Execute           ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/edabk/cu_cai_2k1/CNN_VAE/test_serial/line_buffer_code_C/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /tools/Xilinx/Vitis_HLS/2021.2/lnx64/lib/libfloatconversion_39.bc -o /home/edabk/cu_cai_2k1/CNN_VAE/test_serial/line_buffer_code_C/solution1/.autopilot/db/a.g.ld.4.m2.bc > /home/edabk/cu_cai_2k1/CNN_VAE/test_serial/line_buffer_code_C/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.out.log 2> /home/edabk/cu_cai_2k1/CNN_VAE/test_serial/line_buffer_code_C/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.err.log 
 INFO-FLOW: 
@@ -167,7 +168,7 @@ Execute         ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2021.2/lnx64/
 Command         ap_eval done; 0.46 sec.
 INFO: [HLS 214-284] Auto array partition mode is set into default.
 INFO: [HLS 214-178] Inlining function 'relu(double)' into 'void convolution<double, double, double, double, 28, 28, 1, 16, 28, 28, 3, 3, 1, 1>(int, int, int, double*, double*, double const*, double*)' (./CNN.h:29:0)
-INFO: [HLS 214-178] Inlining function 'relu(double)' into 'void convolution<double, double, double, double, 14, 14, 1, 8, 14, 14, 3, 3, 1, 1>(int, int, int, double*, double*, double const*, double*)' (./CNN.h:29:0)
+INFO: [HLS 214-178] Inlining function 'relu(double)' into 'void convolution<double, double, double, double, 14, 14, 16, 8, 14, 14, 3, 3, 1, 1>(int, int, int, double*, double*, double const*, double*)' (./CNN.h:29:0)
 INFO: [HLS 214-178] Inlining function 'relu(double)' into 'void convolution<double, double, double, double, 7, 7, 8, 8, 7, 7, 3, 3, 1, 1>(int, int, int, double*, double*, double const*, double*)' (./CNN.h:29:0)
 INFO: [HLS 214-178] Inlining function 'relu(double)' into 'void convolution<double, double, double, double, 4, 4, 8, 8, 4, 4, 3, 3, 1, 1>(int, int, int, double*, double*, double const*, double*)' (./CNN.h:29:0)
 INFO: [HLS 214-178] Inlining function 'relu(double)' into 'void convolution<double, double, double, double, 8, 8, 8, 8, 8, 8, 3, 3, 1, 1>(int, int, int, double*, double*, double const*, double*)' (./CNN.h:29:0)
@@ -181,15 +182,14 @@ INFO: [HLS 214-178] Inlining function 'void upsampling<double, double, 8, 8, 8, 
 INFO: [HLS 214-178] Inlining function 'void upsampling<double, double, 14, 14, 16, 28, 28, 2, 2>(int, int, double*, double*)' into 'CNN(int, int, int, double*, double*, double*, double*, double*, double*, double*, double*, double*, double*, double*, double*, double*, double*)' (model.cpp:8:0)
 INFO: [HLS 214-270] Starting automatic array partition analysis...
 INFO-FLOW: DBG:PUTS: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: /home/edabk/cu_cai_2k1/CNN_VAE/test_serial/line_buffer_code_C/solution1/.autopilot/db/kernel.internal.xml
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.68 seconds. CPU system time: 0.23 seconds. Elapsed time: 3.91 seconds; current allocated memory: 210.645 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 210.645 MB.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.58 seconds. CPU system time: 0.24 seconds. Elapsed time: 3.82 seconds; current allocated memory: 210.660 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 210.660 MB.
 Execute         opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
 Execute           cleanup_all_models 
 INFO: [HLS 200-10] Starting code transformations ...
 INFO-FLOW: Running Standard Transforms...
 Execute           transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top CNN -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /home/edabk/cu_cai_2k1/CNN_VAE/test_serial/line_buffer_code_C/solution1/.autopilot/db/a.g.0.bc -o /home/edabk/cu_cai_2k1/CNN_VAE/test_serial/line_buffer_code_C/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
-Command           transform done; 0.11 sec.
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 213.238 MB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 213.266 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO-FLOW: Checking Synthesizability 1/2..
 Execute           transform -hls -syn-check -check-rec-only -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin /home/edabk/cu_cai_2k1/CNN_VAE/test_serial/line_buffer_code_C/solution1/.autopilot/db/a.g.1.bc -o /home/edabk/cu_cai_2k1/CNN_VAE/test_serial/line_buffer_code_C/solution1/.autopilot/db/a.g.2.prechk.bc -f 
@@ -199,9 +199,9 @@ ERROR: [SYNCHK 200-21] ./CNN.h:146: The GCC/LLVM intrinsic function 'stacksave' 
 INFO: [SYNCHK 200-10] 1 error(s), 0 warning(s).
 Command           transform done; error code: 1; 
 ERROR: [HLS 200-70] Synthesizability check failed.
-Command         opt_and_import_c done; error code: 2; 0.2 sec.
-Command       elaborate done; error code: 2; 4.61 sec.
-Command     csynth_design done; error code: 2; 4.61 sec.
-INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 4.33 seconds. CPU system time: 0.44 seconds. Elapsed time: 4.61 seconds; current allocated memory: -928.988 MB.
-Command   ap_source done; error code: 1; 6.64 sec.
+Command         opt_and_import_c done; error code: 2; 0.19 sec.
+Command       elaborate done; error code: 2; 4.5 sec.
+Command     csynth_design done; error code: 2; 4.5 sec.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 4.09 seconds. CPU system time: 0.44 seconds. Elapsed time: 4.5 seconds; current allocated memory: -928.961 MB.
+Command   ap_source done; error code: 1; 6.62 sec.
 Execute   cleanup_all 

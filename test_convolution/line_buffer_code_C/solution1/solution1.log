@@ -1,0 +1,225 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xcvu9p-flga2104-2-i 
+INFO: [HLS 200-1611] Setting target device to 'xcvu9p-flga2104-2-i'
+INFO: [HLS 200-1510] Running: create_clock -period 6.66 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.66ns.
+INFO: [HLS 200-1510] Running: csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1.54 seconds. CPU system time: 0.41 seconds. Elapsed time: 0.97 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.131 GB.
+INFO: [HLS 200-10] Analyzing design file 'model.cpp' ... 
+WARNING: [HLS 207-4067] using directive refers to implicitly-defined namespace 'std' (./CNN.h:5:17)
+WARNING: [HLS 207-5287] unused parameter 'padding' (./CNN.h:33:23)
+WARNING: [HLS 207-5287] unused parameter 'width' (./CNN.h:33:36)
+WARNING: [HLS 207-5287] unused parameter 'hight' (./CNN.h:33:47)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.35 seconds. CPU system time: 0.22 seconds. Elapsed time: 0.46 seconds; current allocated memory: 222.770 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-178] Inlining function 'relu(double)' into 'void convolution<double, double, double, double, 28, 28, 1, 16, 28, 28, 3, 3, 1, 1>(int, int, int, double*, double*, double const*, double*)' (./CNN.h:33:0)
+INFO: [HLS 214-178] Inlining function 'relu(double)' into 'void convolution<double, double, double, double, 14, 14, 16, 8, 14, 14, 3, 3, 1, 1>(int, int, int, double*, double*, double const*, double*)' (./CNN.h:33:0)
+INFO: [HLS 214-178] Inlining function 'void max_pooling<double, double, 16, 28, 28, 14, 14, 2, 2>(int, int, double*, double*)' into 'CNN(int, int, int, double*, double*, double*, double*)' (model.cpp:8:0)
+WARNING: [HLS 214-167] The program may have out of bound array access (./CNN.h:47:26)
+WARNING: [HLS 214-167] The program may have out of bound array access (./CNN.h:47:24)
+WARNING: [HLS 214-167] The program may have out of bound array access (./CNN.h:48:26)
+WARNING: [HLS 214-167] The program may have out of bound array access (./CNN.h:48:24)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.98 seconds. CPU system time: 0.26 seconds. Elapsed time: 3.49 seconds; current allocated memory: 223.555 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 223.555 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 224.621 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 224.723 MB.
+INFO: [XFORM 203-510] Pipelining loop 'Shift_win_right' (./CNN.h:69) in function 'convolution<double, double, double, double, 28, 28, 1, 16, 28, 28, 3, 3, 1, 1>' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_46_3' (./CNN.h:47) in function 'convolution<double, double, double, double, 28, 28, 1, 16, 28, 28, 3, 3, 1, 1>' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Shift_win_right' (./CNN.h:69) in function 'convolution<double, double, double, double, 14, 14, 16, 8, 14, 14, 3, 3, 1, 1>' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_46_3' (./CNN.h:47) in function 'convolution<double, double, double, double, 14, 14, 16, 8, 14, 14, 3, 3, 1, 1>' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_120_3' (./CNN.h:120) in function 'CNN' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Shift_win_right' (./CNN.h:69) in function 'convolution<double, double, double, double, 28, 28, 1, 16, 28, 28, 3, 3, 1, 1>' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Shift_win_right' (./CNN.h:69) in function 'convolution<double, double, double, double, 14, 14, 16, 8, 14, 14, 3, 3, 1, 1>' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_120_3' (./CNN.h:120) in function 'CNN' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_69_4' (./CNN.h:69) in function 'convolution<double, double, double, double, 28, 28, 1, 16, 28, 28, 3, 3, 1, 1>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_85_5' (./CNN.h:84) in function 'convolution<double, double, double, double, 28, 28, 1, 16, 28, 28, 3, 3, 1, 1>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_86_6' (./CNN.h:84) in function 'convolution<double, double, double, double, 28, 28, 1, 16, 28, 28, 3, 3, 1, 1>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_69_4' (./CNN.h:69) in function 'convolution<double, double, double, double, 14, 14, 16, 8, 14, 14, 3, 3, 1, 1>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_85_5' (./CNN.h:84) in function 'convolution<double, double, double, double, 14, 14, 16, 8, 14, 14, 3, 3, 1, 1>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_86_6' (./CNN.h:84) in function 'convolution<double, double, double, double, 14, 14, 16, 8, 14, 14, 3, 3, 1, 1>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_121_4' (./CNN.h:121) in function 'CNN' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_128_5' (./CNN.h:127) in function 'CNN' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_129_6' (./CNN.h:127) in function 'CNN' completely with a factor of 2.
+INFO: [XFORM 203-102] Partitioning array 'window_buffer' (./CNN.h:37) in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'window_buffer.0' (./CNN.h:37) automatically.
+INFO: [XFORM 203-102] Partitioning array 'window_buffer.1' (./CNN.h:37) automatically.
+INFO: [XFORM 203-102] Partitioning array 'window_buffer.2' (./CNN.h:37) automatically.
+INFO: [XFORM 203-102] Partitioning array 'window_buffer' (./CNN.h:37) in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'window_buffer.0' (./CNN.h:37) automatically.
+INFO: [XFORM 203-102] Partitioning array 'window_buffer.1' (./CNN.h:37) automatically.
+INFO: [XFORM 203-102] Partitioning array 'window_buffer.2' (./CNN.h:37) automatically.
+INFO: [XFORM 203-102] Partitioning array 'line_buffer_0' (./CNN.h:114) automatically.
+INFO: [XFORM 203-102] Partitioning array 'line_buffer_1' (./CNN.h:115) automatically.
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'line_buffer_1' in function 'convolution<double, double, double, double, 28, 28, 1, 16, 28, 28, 3, 3, 1, 1>' (./CNN.h:47:26).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'line_buffer_0' in function 'convolution<double, double, double, double, 28, 28, 1, 16, 28, 28, 3, 3, 1, 1>' (./CNN.h:47:7).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'line_buffer_2' in function 'convolution<double, double, double, double, 28, 28, 1, 16, 28, 28, 3, 3, 1, 1>' (./CNN.h:48:26).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'line_buffer_1.1' in function 'convolution<double, double, double, double, 14, 14, 16, 8, 14, 14, 3, 3, 1, 1>' (./CNN.h:47:26).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'line_buffer_0.1' in function 'convolution<double, double, double, double, 14, 14, 16, 8, 14, 14, 3, 3, 1, 1>' (./CNN.h:47:7).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'line_buffer_2.1' in function 'convolution<double, double, double, double, 14, 14, 16, 8, 14, 14, 3, 3, 1, 1>' (./CNN.h:48:26).
+INFO: [XFORM 203-11] Balancing expressions in function 'convolution<double, double, double, double, 28, 28, 1, 16, 28, 28, 3, 3, 1, 1>' (./CNN.h:15:17)...3 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'convolution<double, double, double, double, 14, 14, 16, 8, 14, 14, 3, 3, 1, 1>' (./CNN.h:15:17)...6 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.28 seconds; current allocated memory: 247.434 MB.
+WARNING: [HLS 200-960] Cannot flatten loop 'Push_pixel' (./CNN.h:46:31) in function 'convolution<double, double, double, double, 28, 28, 1, 16, 28, 28, 3, 3, 1, 1>' more than one sub loop.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_44_2' (./CNN.h:44:33) in function 'convolution<double, double, double, double, 28, 28, 1, 16, 28, 28, 3, 3, 1, 1>'.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_46_3' (./CNN.h:47:26) in function 'convolution<double, double, double, double, 14, 14, 16, 8, 14, 14, 3, 3, 1, 1>' is an infinite loop.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_119_2' (./CNN.h:119:36) in function 'CNN'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_118_1' (./CNN.h:118:32) in function 'CNN'.
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buffer_1.1' (./CNN.h:48:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buffer_2.1' (./CNN.h:50:25)
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buffer_0' (./CNN.h:47:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buffer_1' (./CNN.h:48:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buffer_2' (./CNN.h:50:25)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.21 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.22 seconds; current allocated memory: 286.453 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'CNN' ...
+WARNING: [SYN 201-103] Legalizing function name 'convolution<double, double, double, double, 28, 28, 1, 16, 28, 28, 3, 3, 1, 1>_Pipeline_VITIS_LOOP_46_3' to 'convolution_double_double_double_double_28_28_1_16_28_28_3_3_1_1_Pipeline_VITIS_LOOP_46_3'.
+WARNING: [SYN 201-103] Legalizing function name 'convolution<double, double, double, double, 28, 28, 1, 16, 28, 28, 3, 3, 1, 1>_Pipeline_Shift_win_right' to 'convolution_double_double_double_double_28_28_1_16_28_28_3_3_1_1_Pipeline_Shift_win_right'.
+WARNING: [SYN 201-103] Legalizing function name 'convolution<double, double, double, double, 28, 28, 1, 16, 28, 28, 3, 3, 1, 1>' to 'convolution_double_double_double_double_28_28_1_16_28_28_3_3_1_1_s'.
+WARNING: [SYN 201-103] Legalizing function name 'convolution<double, double, double, double, 14, 14, 16, 8, 14, 14, 3, 3, 1, 1>' to 'convolution_double_double_double_double_14_14_16_8_14_14_3_3_1_1_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'convolution_double_double_double_double_28_28_1_16_28_28_3_3_1_1_Pipeline_VITIS_LOOP_46_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_46_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_46_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.06 seconds; current allocated memory: 288.078 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 288.078 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'convolution_double_double_double_double_28_28_1_16_28_28_3_3_1_1_Pipeline_Shift_win_right' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Shift_win_right'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 47, loop 'Shift_win_right'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.22 seconds. CPU system time: 0 seconds. Elapsed time: 0.22 seconds; current allocated memory: 288.801 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.24 seconds. CPU system time: 0 seconds. Elapsed time: 0.24 seconds; current allocated memory: 288.801 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'convolution_double_double_double_double_28_28_1_16_28_28_3_3_1_1_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.24 seconds. CPU system time: 0 seconds. Elapsed time: 0.24 seconds; current allocated memory: 289.766 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 289.766 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'CNN_Pipeline_VITIS_LOOP_118_1_VITIS_LOOP_119_2_VITIS_LOOP_120_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_118_1_VITIS_LOOP_119_2_VITIS_LOOP_120_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_118_1_VITIS_LOOP_119_2_VITIS_LOOP_120_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.23 seconds. CPU system time: 0 seconds. Elapsed time: 0.23 seconds; current allocated memory: 290.398 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 290.398 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'convolution_double_double_double_double_14_14_16_8_14_14_3_3_1_1_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_46_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_46_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 290.672 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 290.672 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'CNN' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 290.824 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 290.824 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'convolution_double_double_double_double_28_28_1_16_28_28_3_3_1_1_Pipeline_VITIS_LOOP_46_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'convolution_double_double_double_double_28_28_1_16_28_28_3_3_1_1_Pipeline_VITIS_LOOP_46_3' pipeline 'VITIS_LOOP_46_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'convolution_double_double_double_double_28_28_1_16_28_28_3_3_1_1_Pipeline_VITIS_LOOP_46_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.23 seconds. CPU system time: 0 seconds. Elapsed time: 0.24 seconds; current allocated memory: 290.824 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'convolution_double_double_double_double_28_28_1_16_28_28_3_3_1_1_Pipeline_Shift_win_right' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'convolution_double_double_double_double_28_28_1_16_28_28_3_3_1_1_Pipeline_Shift_win_right' pipeline 'Shift_win_right' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dadd_64ns_64ns_64_4_full_dsp_1': 10 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dcmp_64ns_64ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_4_max_dsp_1': 9 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'convolution_double_double_double_double_28_28_1_16_28_28_3_3_1_1_Pipeline_Shift_win_right'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 293.406 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'convolution_double_double_double_double_28_28_1_16_28_28_3_3_1_1_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'convolution_double_double_double_double_28_28_1_16_28_28_3_3_1_1_s_line_buffer_0_RAM_AUTO_1R1W' to 'convolution_double_double_double_double_28_28_1_16_28_28_3_3_1_1_s_line_buffebkb' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'convolution_double_double_double_double_28_28_1_16_28_28_3_3_1_1_s_line_buffer_1_RAM_AUTO_1R1W' to 'convolution_double_double_double_double_28_28_1_16_28_28_3_3_1_1_s_line_buffecud' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'convolution_double_double_double_double_28_28_1_16_28_28_3_3_1_1_s_line_buffer_2_RAM_AUTO_1R1W' to 'convolution_double_double_double_double_28_28_1_16_28_28_3_3_1_1_s_line_buffedEe' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'convolution_double_double_double_double_28_28_1_16_28_28_3_3_1_1_s_bias_conv1_ROM_AUTO_1R' to 'convolution_double_double_double_double_28_28_1_16_28_28_3_3_1_1_s_bias_conv1eOg' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'convolution_double_double_double_double_28_28_1_16_28_28_3_3_1_1_s_kernel_conv1_ROM_AUTO_1R' to 'convolution_double_double_double_double_28_28_1_16_28_28_3_3_1_1_s_kernel_confYi' due to the length limit 80
+INFO: [RTGEN 206-100] Finished creating RTL model for 'convolution_double_double_double_double_28_28_1_16_28_28_3_3_1_1_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.44 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.45 seconds; current allocated memory: 296.242 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'CNN_Pipeline_VITIS_LOOP_118_1_VITIS_LOOP_119_2_VITIS_LOOP_120_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'CNN_Pipeline_VITIS_LOOP_118_1_VITIS_LOOP_119_2_VITIS_LOOP_120_3' pipeline 'VITIS_LOOP_118_1_VITIS_LOOP_119_2_VITIS_LOOP_120_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'CNN_Pipeline_VITIS_LOOP_118_1_VITIS_LOOP_119_2_VITIS_LOOP_120_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.41 seconds. CPU system time: 0 seconds. Elapsed time: 0.41 seconds; current allocated memory: 298.391 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'convolution_double_double_double_double_14_14_16_8_14_14_3_3_1_1_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'convolution_double_double_double_double_14_14_16_8_14_14_3_3_1_1_s_line_buffer_2_1_RAM_AUTO_1R1W' to 'convolution_double_double_double_double_14_14_16_8_14_14_3_3_1_1_s_line_buffeg8j' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'convolution_double_double_double_double_14_14_16_8_14_14_3_3_1_1_s_line_buffer_1_1_RAM_AUTO_0R0W' to 'convolution_double_double_double_double_14_14_16_8_14_14_3_3_1_1_s_line_buffehbi' due to the length limit 80
+INFO: [RTGEN 206-100] Finished creating RTL model for 'convolution_double_double_double_double_14_14_16_8_14_14_3_3_1_1_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.15 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 299.609 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'CNN' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'CNN/padding' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'CNN/width' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'CNN/hight' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'CNN/image_r' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'CNN/output_conv1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'CNN/output_pooling1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'CNN/output_conv2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'CNN' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Port 'CNN/padding' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'CNN/output_conv2' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.

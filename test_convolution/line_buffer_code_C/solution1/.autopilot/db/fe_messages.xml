@@ -1,0 +1,31 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="" msg_id="207-4067" msg_severity="WARNING" msg_loc="./CNN.h:5:17" msg_body="using directive refers to implicitly-defined namespace 'std'">
+        <args/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5287" msg_severity="WARNING" msg_loc="./CNN.h:33:23" msg_body="unused parameter 'padding'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5287" msg_severity="WARNING" msg_loc="./CNN.h:33:36" msg_body="unused parameter 'width'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5287" msg_severity="WARNING" msg_loc="./CNN.h:33:47" msg_body="unused parameter 'hight'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="model.cpp:9:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="CNN" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=CNN" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="./CNN.h:33:0" msg_body="Inlining function 'relu(double)' into 'void convolution&lt;double, double, double, double, 28, 28, 1, 16, 28, 28, 3, 3, 1, 1&gt;(int, int, int, double*, double*, double const*, double*)'">
+        <args Callee="relu(double)" Caller="void convolution&lt;double, double, double, double, 28, 28, 1, 16, 28, 28, 3, 3, 1, 1&gt;(int, int, int, double*, double*, double const*, double*)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="./CNN.h:33:0" msg_body="Inlining function 'relu(double)' into 'void convolution&lt;double, double, double, double, 14, 14, 16, 8, 14, 14, 3, 3, 1, 1&gt;(int, int, int, double*, double*, double const*, double*)'">
+        <args Callee="relu(double)" Caller="void convolution&lt;double, double, double, double, 14, 14, 16, 8, 14, 14, 3, 3, 1, 1&gt;(int, int, int, double*, double*, double const*, double*)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="model.cpp:8:0" msg_body="Inlining function 'void max_pooling&lt;double, double, 16, 28, 28, 14, 14, 2, 2&gt;(int, int, double*, double*)' into 'CNN(int, int, int, double*, double*, double*, double*)'">
+        <args Callee="void max_pooling&lt;double, double, 16, 28, 28, 14, 14, 2, 2&gt;(int, int, double*, double*)" Caller="CNN(int, int, int, double*, double*, double*, double*)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="./CNN.h:47:26" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="./CNN.h:47:24" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="./CNN.h:48:26" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="./CNN.h:48:24" msg_body="The program may have out of bound array access"/>
+</xilinx:hls_fe_msgs>
+

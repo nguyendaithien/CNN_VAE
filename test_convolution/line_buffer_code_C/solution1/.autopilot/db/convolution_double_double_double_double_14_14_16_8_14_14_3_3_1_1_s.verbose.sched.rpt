@@ -1,0 +1,156 @@
+
+
+================================================================
+== Vitis HLS Report for 'convolution_double_double_double_double_14_14_16_8_14_14_3_3_1_1_s'
+================================================================
+* Date:           Mon Jan 29 11:40:04 2024
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        line_buffer_code_C
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu9p-flga2104-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  6.66 ns|  1.428 ns|     1.80 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_46_3  |       17|       17|         2|          1|          1|    16|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 0
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 2 3 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 2 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.38>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%j = alloca i32 1"   --->   Operation 4 'alloca' 'j' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 16, i64 16, i64 16"   --->   Operation 5 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specloopname_ln43 = specloopname void @_ssdm_op_SpecLoopName, void @empty_3" [./CNN.h:43]   --->   Operation 6 'specloopname' 'specloopname_ln43' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%empty_23 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 8, i64 8, i64 8"   --->   Operation 7 'speclooptripcount' 'empty_23' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specloopname_ln44 = specloopname void @_ssdm_op_SpecLoopName, void @empty_2" [./CNN.h:44]   --->   Operation 8 'specloopname' 'specloopname_ln44' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%empty_24 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 16, i64 16, i64 16"   --->   Operation 9 'speclooptripcount' 'empty_24' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specloopname_ln46 = specloopname void @_ssdm_op_SpecLoopName, void @empty" [./CNN.h:46]   --->   Operation 10 'specloopname' 'specloopname_ln46' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.38ns)   --->   "%store_ln46 = store i4 0, i4 %j" [./CNN.h:46]   --->   Operation 11 'store' 'store_ln46' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%br_ln46 = br void" [./CNN.h:46]   --->   Operation 12 'br' 'br_ln46' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 1.09>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%j_2 = load i4 %j" [./CNN.h:46]   --->   Operation 13 'load' 'j_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%trunc_ln46_cast7 = zext i4 %j_2" [./CNN.h:46]   --->   Operation 14 'zext' 'trunc_ln46_cast7' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%line_buffer_2_1_addr = getelementptr i64 %line_buffer_2_1, i64 0, i64 %trunc_ln46_cast7" [./CNN.h:48]   --->   Operation 15 'getelementptr' 'line_buffer_2_1_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [2/2] (0.71ns)   --->   "%line_buffer_2_1_load = load i4 %line_buffer_2_1_addr" [./CNN.h:48]   --->   Operation 16 'load' 'line_buffer_2_1_load' <Predicate = true> <Delay = 0.71> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.71> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 14> <RAM>
+ST_2 : Operation 17 [1/1] (0.71ns)   --->   "%store_ln50 = store i64 0, i4 %line_buffer_2_1_addr" [./CNN.h:50]   --->   Operation 17 'store' 'store_ln50' <Predicate = true> <Delay = 0.71> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.71> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 14> <RAM>
+ST_2 : Operation 18 [1/1] (0.70ns)   --->   "%add_ln46 = add i4 %j_2, i4 1" [./CNN.h:46]   --->   Operation 18 'add' 'add_ln46' <Predicate = true> <Delay = 0.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 19 [1/1] (0.38ns)   --->   "%store_ln46 = store i4 %add_ln46, i4 %j" [./CNN.h:46]   --->   Operation 19 'store' 'store_ln46' <Predicate = true> <Delay = 0.38>
+
+State 3 <SV = 2> <Delay = 1.42>
+ST_3 : Operation 20 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 20 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 21 [1/1] (0.00ns)   --->   "%empty_25 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 16, i64 16, i64 16"   --->   Operation 21 'speclooptripcount' 'empty_25' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%specloopname_ln47 = specloopname void @_ssdm_op_SpecLoopName, void @empty_1" [./CNN.h:47]   --->   Operation 22 'specloopname' 'specloopname_ln47' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%line_buffer_1_1_addr = getelementptr i64 %line_buffer_1_1, i64 0, i64 %trunc_ln46_cast7" [./CNN.h:47]   --->   Operation 23 'getelementptr' 'line_buffer_1_1_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 24 [1/2] (0.71ns)   --->   "%line_buffer_2_1_load = load i4 %line_buffer_2_1_addr" [./CNN.h:48]   --->   Operation 24 'load' 'line_buffer_2_1_load' <Predicate = true> <Delay = 0.71> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.71> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 14> <RAM>
+ST_3 : Operation 25 [1/1] (0.71ns)   --->   "%store_ln48 = store i64 %line_buffer_2_1_load, i4 %line_buffer_1_1_addr" [./CNN.h:48]   --->   Operation 25 'store' 'store_ln48' <Predicate = true> <Delay = 0.71> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.71> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 14> <RAM>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%br_ln46 = br void" [./CNN.h:46]   --->   Operation 26 'br' 'br_ln46' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 6.66ns, clock uncertainty: 1.8ns.
+
+ <State 1>: 0.387ns
+The critical path consists of the following:
+	'alloca' operation ('j') [3]  (0 ns)
+	'store' operation ('store_ln46', ./CNN.h:46) of constant 0 on local variable 'j' [10]  (0.387 ns)
+
+ <State 2>: 1.09ns
+The critical path consists of the following:
+	'load' operation ('j', ./CNN.h:46) on local variable 'j' [13]  (0 ns)
+	'add' operation ('add_ln46', ./CNN.h:46) [23]  (0.708 ns)
+	'store' operation ('store_ln46', ./CNN.h:46) of variable 'add_ln46', ./CNN.h:46 on local variable 'j' [24]  (0.387 ns)
+
+ <State 3>: 1.43ns
+The critical path consists of the following:
+	'load' operation ('line_buffer_2_1_load', ./CNN.h:48) on array 'line_buffer_2_1' [20]  (0.714 ns)
+	'store' operation ('store_ln48', ./CNN.h:48) of variable 'line_buffer_2_1_load', ./CNN.h:48 on array 'line_buffer_1_1' [21]  (0.714 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

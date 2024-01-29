@@ -1,0 +1,48 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'CNN'" level="0">
+<item name = "Date">Mon Jan 29 11:40:05 2024
+</item>
+<item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)</item>
+<item name = "Project">line_buffer_code_C</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcvu9p-flga2104-2-i</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">6.66 ns, 4.503 ns, 1.80 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_convolution_double_double_double_double_28_28_1_16_28_28_3_3_1_1_s_fu_96">convolution_double_double_double_double_28_28_1_16_28_28_3_3_1_1_s, 16801, 54241, 0.112 ms, 0.361 ms, 16801, 54241, no</column>
+<column name="grp_convolution_double_double_double_double_14_14_16_8_14_14_3_3_1_1_s_fu_114">convolution_double_double_double_double_14_14_16_8_14_14_3_3_1_1_s, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_CNN_Pipeline_VITIS_LOOP_118_1_VITIS_LOOP_119_2_VITIS_LOOP_120_3_fu_122">CNN_Pipeline_VITIS_LOOP_118_1_VITIS_LOOP_119_2_VITIS_LOOP_120_3, ?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

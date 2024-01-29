@@ -1,0 +1,164 @@
+
+
+================================================================
+== Vitis HLS Report for 'convolution_double_double_double_double_28_28_1_16_28_28_3_3_1_1_Pipeline_VITIS_LOOP_46_3'
+================================================================
+* Date:           Mon Jan 29 11:40:05 2024
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        line_buffer_code_C
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu9p-flga2104-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  6.66 ns|  1.762 ns|     1.80 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       32|       32|  0.213 us|  0.213 us|   32|   32|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_46_3  |       30|       30|         2|          1|          1|    30|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|      108|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|        -|        -|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|       36|    -|
+|Register             |        -|     -|       18|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|       18|      144|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1440|  2280|   788160|   394080|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4320|  6840|  2364480|  1182240|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------+----------+----+---+----+------------+------------+
+    |add_ln46_fu_119_p2     |         +|   0|  0|  12|           5|           1|
+    |icmp_ln46_fu_113_p2    |      icmp|   0|  0|   9|           5|           3|
+    |icmp_ln49_1_fu_137_p2  |      icmp|   0|  0|   9|           5|           3|
+    |icmp_ln49_fu_131_p2    |      icmp|   0|  0|   9|           5|           1|
+    |or_ln49_1_fu_149_p2    |        or|   0|  0|   2|           1|           1|
+    |or_ln49_2_fu_143_p2    |        or|   0|  0|   2|           1|           1|
+    |line_buffer_2_d0       |    select|   0|  0|  63|           1|           1|
+    |ap_enable_pp0          |       xor|   0|  0|   2|           1|           2|
+    +-----------------------+----------+----+---+----+------------+------------+
+    |Total                  |          |   0|  0| 108|          24|          13|
+    +-----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_j_1     |   9|          2|    5|         10|
+    |j_fu_44                  |   9|          2|    5|         10|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  36|          8|   12|         24|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------+---+----+-----+-----------+
+    |            Name            | FF| LUT| Bits| Const Bits|
+    +----------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                   |  1|   0|    1|          0|
+    |ap_done_reg                 |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1     |  1|   0|    1|          0|
+    |j_fu_44                     |  5|   0|    5|          0|
+    |line_buffer_1_addr_reg_184  |  5|   0|    5|          0|
+    |trunc_ln46_cast_reg_179     |  5|   0|   64|         59|
+    +----------------------------+---+----+-----+-----------+
+    |Total                       | 18|   0|   77|         59|
+    +----------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+------------+---------------------------------------------------------------------------------------------------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  |                                              Source Object                                              |    C Type    |
++------------------------+-----+-----+------------+---------------------------------------------------------------------------------------------------------+--------------+
+|ap_clk                  |   in|    1|  ap_ctrl_hs|  convolution<double, double, double, double, 28, 28, 1, 16, 28, 28, 3, 3, 1, 1>_Pipeline_VITIS_LOOP_46_3|  return value|
+|ap_rst                  |   in|    1|  ap_ctrl_hs|  convolution<double, double, double, double, 28, 28, 1, 16, 28, 28, 3, 3, 1, 1>_Pipeline_VITIS_LOOP_46_3|  return value|
+|ap_start                |   in|    1|  ap_ctrl_hs|  convolution<double, double, double, double, 28, 28, 1, 16, 28, 28, 3, 3, 1, 1>_Pipeline_VITIS_LOOP_46_3|  return value|
+|ap_done                 |  out|    1|  ap_ctrl_hs|  convolution<double, double, double, double, 28, 28, 1, 16, 28, 28, 3, 3, 1, 1>_Pipeline_VITIS_LOOP_46_3|  return value|
+|ap_idle                 |  out|    1|  ap_ctrl_hs|  convolution<double, double, double, double, 28, 28, 1, 16, 28, 28, 3, 3, 1, 1>_Pipeline_VITIS_LOOP_46_3|  return value|
+|ap_ready                |  out|    1|  ap_ctrl_hs|  convolution<double, double, double, double, 28, 28, 1, 16, 28, 28, 3, 3, 1, 1>_Pipeline_VITIS_LOOP_46_3|  return value|
+|or_ln49                 |   in|    1|     ap_none|                                                                                                  or_ln49|        scalar|
+|bitcast_ln53            |   in|   64|     ap_none|                                                                                             bitcast_ln53|        scalar|
+|line_buffer_1_address0  |  out|    5|   ap_memory|                                                                                            line_buffer_1|         array|
+|line_buffer_1_ce0       |  out|    1|   ap_memory|                                                                                            line_buffer_1|         array|
+|line_buffer_1_we0       |  out|    1|   ap_memory|                                                                                            line_buffer_1|         array|
+|line_buffer_1_d0        |  out|   64|   ap_memory|                                                                                            line_buffer_1|         array|
+|line_buffer_1_address1  |  out|    5|   ap_memory|                                                                                            line_buffer_1|         array|
+|line_buffer_1_ce1       |  out|    1|   ap_memory|                                                                                            line_buffer_1|         array|
+|line_buffer_1_q1        |   in|   64|   ap_memory|                                                                                            line_buffer_1|         array|
+|line_buffer_0_address0  |  out|    5|   ap_memory|                                                                                            line_buffer_0|         array|
+|line_buffer_0_ce0       |  out|    1|   ap_memory|                                                                                            line_buffer_0|         array|
+|line_buffer_0_we0       |  out|    1|   ap_memory|                                                                                            line_buffer_0|         array|
+|line_buffer_0_d0        |  out|   64|   ap_memory|                                                                                            line_buffer_0|         array|
+|line_buffer_2_address0  |  out|    5|   ap_memory|                                                                                            line_buffer_2|         array|
+|line_buffer_2_ce0       |  out|    1|   ap_memory|                                                                                            line_buffer_2|         array|
+|line_buffer_2_we0       |  out|    1|   ap_memory|                                                                                            line_buffer_2|         array|
+|line_buffer_2_d0        |  out|   64|   ap_memory|                                                                                            line_buffer_2|         array|
+|line_buffer_2_q0        |   in|   64|   ap_memory|                                                                                            line_buffer_2|         array|
++------------------------+-----+-----+------------+---------------------------------------------------------------------------------------------------------+--------------+
+

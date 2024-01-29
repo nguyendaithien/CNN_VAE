@@ -1,0 +1,913 @@
+<profile>
+    <ReportVersion>
+        <Version>2021.2</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>virtexuplus</ProductFamily>
+        <Part>xcvu9p-flga2104-2-i</Part>
+        <TopModelName>CNN</TopModelName>
+        <TargetClockPeriod>6.66</TargetClockPeriod>
+        <ClockUncertainty>1.80</ClockUncertainty>
+        <FlowTarget>vivado</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>no</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>4.503</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>undef</Best-caseLatency>
+            <Average-caseLatency>undef</Average-caseLatency>
+            <Worst-caseLatency>undef</Worst-caseLatency>
+            <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+            <Interval-min>undef</Interval-min>
+            <Interval-max>undef</Interval-max>
+        </SummaryOfOverallLatency>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <BRAM_18K>16</BRAM_18K>
+            <DSP>105</DSP>
+            <FF>11704</FF>
+            <LUT>11212</LUT>
+            <URAM>0</URAM>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>4320</BRAM_18K>
+            <DSP>6840</DSP>
+            <FF>2364480</FF>
+            <LUT>1182240</LUT>
+            <URAM>960</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>ap_local_block</name>
+            <Object>CNN</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_local_deadlock</name>
+            <Object>CNN</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>CNN</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst</name>
+            <Object>CNN</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_start</name>
+            <Object>CNN</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_done</name>
+            <Object>CNN</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_idle</name>
+            <Object>CNN</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_ready</name>
+            <Object>CNN</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>padding</name>
+            <Object>padding</Object>
+            <Type>scalar</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>width</name>
+            <Object>width</Object>
+            <Type>scalar</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>hight</name>
+            <Object>hight</Object>
+            <Type>scalar</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>image_r</name>
+            <Object>image_r</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>output_conv1_i</name>
+            <Object>output_conv1</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_ovld</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>output_conv1_o</name>
+            <Object>output_conv1</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_ovld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>output_conv1_o_ap_vld</name>
+            <Object>output_conv1</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_ovld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>output_pooling1</name>
+            <Object>output_pooling1</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>output_pooling1_ap_vld</name>
+            <Object>output_pooling1</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>output_conv2</name>
+            <Object>output_conv2</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule MAX_DEPTH="4">
+            <ModuleName>CNN</ModuleName>
+            <InstancesList>
+                <Instance>
+                    <InstName>grp_convolution_double_double_double_double_28_28_1_16_28_28_3_3_1_1_s_fu_96</InstName>
+                    <ModuleName>convolution_double_double_double_double_28_28_1_16_28_28_3_3_1_1_s</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>96</ID>
+                    <InstancesList>
+                        <Instance>
+                            <InstName>grp_convolution_double_double_double_double_28_28_1_16_28_28_3_3_1_1_Pipeline_VITIS_LOOP_46_3_fu_259</InstName>
+                            <ModuleName>convolution_double_double_double_double_28_28_1_16_28_28_3_3_1_1_Pipeline_VITIS_LOOP_46_3</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>259</ID>
+                            <BindInstances>add_ln46_fu_119_p2</BindInstances>
+                        </Instance>
+                        <Instance>
+                            <InstName>grp_convolution_double_double_double_double_28_28_1_16_28_28_3_3_1_1_Pipeline_Shift_win_right_fu_271</InstName>
+                            <ModuleName>convolution_double_double_double_double_28_28_1_16_28_28_3_3_1_1_Pipeline_Shift_win_right</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>271</ID>
+                            <BindInstances>add_ln68_fu_380_p2 empty_19_fu_386_p2 dmul_64ns_64ns_64_4_max_dsp_1_U16 dadd_64ns_64ns_64_4_full_dsp_1_U6 dmul_64ns_64ns_64_4_max_dsp_1_U17 dadd_64ns_64ns_64_4_full_dsp_1_U7 dmul_64ns_64ns_64_4_max_dsp_1_U18 dadd_64ns_64ns_64_4_full_dsp_1_U8 dmul_64ns_64ns_64_4_max_dsp_1_U19 dadd_64ns_64ns_64_4_full_dsp_1_U9 dmul_64ns_64ns_64_4_max_dsp_1_U20 dadd_64ns_64ns_64_4_full_dsp_1_U10 dmul_64ns_64ns_64_4_max_dsp_1_U21 dadd_64ns_64ns_64_4_full_dsp_1_U11 dmul_64ns_64ns_64_4_max_dsp_1_U22 dadd_64ns_64ns_64_4_full_dsp_1_U12 dmul_64ns_64ns_64_4_max_dsp_1_U23 dadd_64ns_64ns_64_4_full_dsp_1_U13 dmul_64ns_64ns_64_4_max_dsp_1_U24 dadd_64ns_64ns_64_4_full_dsp_1_U14 dadd_64ns_64ns_64_4_full_dsp_1_U15</BindInstances>
+                        </Instance>
+                    </InstancesList>
+                    <BindInstances>empty_20_fu_344_p2 add_ln44_fu_356_p2 add_ln44_9_fu_379_p2 p_mid1_fu_405_p2 add_ln44_1_fu_437_p2 add_ln44_2_fu_448_p2 add_ln44_3_fu_459_p2 add_ln44_4_fu_470_p2 add_ln44_5_fu_481_p2 add_ln44_6_fu_492_p2 add_ln44_7_fu_503_p2 add_ln44_8_fu_514_p2 add_ln45_fu_560_p2 line_buffer_0_U line_buffer_1_U line_buffer_2_U bias_conv1_U kernel_conv1_U</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_convolution_double_double_double_double_14_14_16_8_14_14_3_3_1_1_s_fu_114</InstName>
+                    <ModuleName>convolution_double_double_double_double_14_14_16_8_14_14_3_3_1_1_s</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>114</ID>
+                    <BindInstances>add_ln46_fu_83_p2 line_buffer_2_1_U line_buffer_1_1_U</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_CNN_Pipeline_VITIS_LOOP_118_1_VITIS_LOOP_119_2_VITIS_LOOP_120_3_fu_122</InstName>
+                    <ModuleName>CNN_Pipeline_VITIS_LOOP_118_1_VITIS_LOOP_119_2_VITIS_LOOP_120_3</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>122</ID>
+                    <BindInstances>add_ln118_fu_179_p2 add_ln119_fu_231_p2 add_ln120_fu_292_p2 add_ln119_1_fu_298_p2</BindInstances>
+                </Instance>
+            </InstancesList>
+            <BindInstances>add_ln118_fu_152_p2 add_ln118_1_fu_187_p2 mul_32ns_32ns_126_1_1_U64</BindInstances>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>convolution_double_double_double_double_28_28_1_16_28_28_3_3_1_1_Pipeline_VITIS_LOOP_46_3</Name>
+            <Loops>
+                <VITIS_LOOP_46_3/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>6.66</TargetClockPeriod>
+                    <ClockUncertainty>1.80</ClockUncertainty>
+                    <EstimatedClockPeriod>1.762</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>32</Best-caseLatency>
+                    <Average-caseLatency>32</Average-caseLatency>
+                    <Worst-caseLatency>32</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.213 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.213 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.213 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>32</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_46_3>
+                        <Name>VITIS_LOOP_46_3</Name>
+                        <TripCount>30</TripCount>
+                        <Latency>30</Latency>
+                        <AbsoluteTimeLatency>0.200 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>2</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_46_3>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>18</FF>
+                    <AVAIL_FF>2364480</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>144</LUT>
+                    <AVAIL_LUT>1182240</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4320</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>6840</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_46_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln46_fu_119_p2" SOURCE="./CNN.h:46" URAM="0" VARIABLE="add_ln46"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>convolution_double_double_double_double_28_28_1_16_28_28_3_3_1_1_Pipeline_Shift_win_right</Name>
+            <Loops>
+                <Shift_win_right/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>6.66</TargetClockPeriod>
+                    <ClockUncertainty>1.80</ClockUncertainty>
+                    <EstimatedClockPeriod>4.503</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>75</Best-caseLatency>
+                    <Average-caseLatency>75</Average-caseLatency>
+                    <Worst-caseLatency>75</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.499 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.499 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.499 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>75</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <Shift_win_right>
+                        <Name>Shift_win_right</Name>
+                        <TripCount>28</TripCount>
+                        <Latency>73</Latency>
+                        <AbsoluteTimeLatency>0.486 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>47</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </Shift_win_right>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>102</DSP>
+                    <AVAIL_DSP>6840</AVAIL_DSP>
+                    <UTIL_DSP>1</UTIL_DSP>
+                    <FF>9247</FF>
+                    <AVAIL_FF>2364480</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>8535</LUT>
+                    <AVAIL_LUT>1182240</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4320</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Shift_win_right" OPTYPE="add" PRAGMA="" RTLNAME="add_ln68_fu_380_p2" SOURCE="./CNN.h:68" URAM="0" VARIABLE="add_ln68"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Shift_win_right" OPTYPE="add" PRAGMA="" RTLNAME="empty_19_fu_386_p2" SOURCE="" URAM="0" VARIABLE="empty_19"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="8" ID="" IMPL="maxdsp" LATENCY="3" LOOP="Shift_win_right" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_4_max_dsp_1_U16" SOURCE="./CNN.h:87" URAM="0" VARIABLE="mul"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="3" LOOP="Shift_win_right" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_4_full_dsp_1_U6" SOURCE="./CNN.h:87" URAM="0" VARIABLE="sum_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="8" ID="" IMPL="maxdsp" LATENCY="3" LOOP="Shift_win_right" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_4_max_dsp_1_U17" SOURCE="./CNN.h:87" URAM="0" VARIABLE="mul_0_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="3" LOOP="Shift_win_right" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_4_full_dsp_1_U7" SOURCE="./CNN.h:87" URAM="0" VARIABLE="sum_1_0_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="8" ID="" IMPL="maxdsp" LATENCY="3" LOOP="Shift_win_right" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_4_max_dsp_1_U18" SOURCE="./CNN.h:87" URAM="0" VARIABLE="mul_0_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="3" LOOP="Shift_win_right" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_4_full_dsp_1_U8" SOURCE="./CNN.h:87" URAM="0" VARIABLE="sum_1_0_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="8" ID="" IMPL="maxdsp" LATENCY="3" LOOP="Shift_win_right" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_4_max_dsp_1_U19" SOURCE="./CNN.h:87" URAM="0" VARIABLE="mul_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="3" LOOP="Shift_win_right" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_4_full_dsp_1_U9" SOURCE="./CNN.h:87" URAM="0" VARIABLE="sum_1_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="8" ID="" IMPL="maxdsp" LATENCY="3" LOOP="Shift_win_right" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_4_max_dsp_1_U20" SOURCE="./CNN.h:87" URAM="0" VARIABLE="mul_1_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="3" LOOP="Shift_win_right" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_4_full_dsp_1_U10" SOURCE="./CNN.h:87" URAM="0" VARIABLE="sum_1_1_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="8" ID="" IMPL="maxdsp" LATENCY="3" LOOP="Shift_win_right" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_4_max_dsp_1_U21" SOURCE="./CNN.h:87" URAM="0" VARIABLE="mul_1_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="3" LOOP="Shift_win_right" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_4_full_dsp_1_U11" SOURCE="./CNN.h:87" URAM="0" VARIABLE="sum_1_1_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="8" ID="" IMPL="maxdsp" LATENCY="3" LOOP="Shift_win_right" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_4_max_dsp_1_U22" SOURCE="./CNN.h:87" URAM="0" VARIABLE="mul_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="3" LOOP="Shift_win_right" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_4_full_dsp_1_U12" SOURCE="./CNN.h:87" URAM="0" VARIABLE="sum_1_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="8" ID="" IMPL="maxdsp" LATENCY="3" LOOP="Shift_win_right" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_4_max_dsp_1_U23" SOURCE="./CNN.h:87" URAM="0" VARIABLE="mul_2_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="3" LOOP="Shift_win_right" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_4_full_dsp_1_U13" SOURCE="./CNN.h:87" URAM="0" VARIABLE="sum_1_2_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="8" ID="" IMPL="maxdsp" LATENCY="3" LOOP="Shift_win_right" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_4_max_dsp_1_U24" SOURCE="./CNN.h:87" URAM="0" VARIABLE="mul_2_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="3" LOOP="Shift_win_right" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_4_full_dsp_1_U14" SOURCE="./CNN.h:87" URAM="0" VARIABLE="sum_1_2_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="3" LOOP="Shift_win_right" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_4_full_dsp_1_U15" SOURCE="./CNN.h:90" URAM="0" VARIABLE="sum"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>convolution_double_double_double_double_28_28_1_16_28_28_3_3_1_1_s</Name>
+            <Loops>
+                <VITIS_LOOP_44_2_Push_pixel/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>6.66</TargetClockPeriod>
+                    <ClockUncertainty>1.80</ClockUncertainty>
+                    <EstimatedClockPeriod>4.503</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>16801</Best-caseLatency>
+                    <Average-caseLatency>35521</Average-caseLatency>
+                    <Worst-caseLatency>54241</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.112 ms</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.237 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.361 ms</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>16801 ~ 54241</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_44_2_Push_pixel>
+                        <Name>VITIS_LOOP_44_2_Push_pixel</Name>
+                        <TripCount>480</TripCount>
+                        <Latency>16800 ~ 54240</Latency>
+                        <AbsoluteTimeLatency>0.112 ms ~ 0.361 ms</AbsoluteTimeLatency>
+                        <IterationLatency>
+                            <range>
+                                <min>35</min>
+                                <max>113</max>
+                            </range>
+                        </IterationLatency>
+                        <PipelineDepth>35 ~ 113</PipelineDepth>
+                        <PipelineType>no</PipelineType>
+                        <InstanceList>
+                            <Instance>grp_convolution_double_double_double_double_28_28_1_16_28_28_3_3_1_1_Pipeline_VITIS_LOOP_46_3_fu_259</Instance>
+                            <Instance>grp_convolution_double_double_double_double_28_28_1_16_28_28_3_3_1_1_Pipeline_Shift_win_right_fu_271</Instance>
+                        </InstanceList>
+                    </VITIS_LOOP_44_2_Push_pixel>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>16</BRAM_18K>
+                    <AVAIL_BRAM>4320</AVAIL_BRAM>
+                    <UTIL_BRAM>~0</UTIL_BRAM>
+                    <DSP>102</DSP>
+                    <AVAIL_DSP>6840</AVAIL_DSP>
+                    <UTIL_DSP>1</UTIL_DSP>
+                    <FF>10658</FF>
+                    <AVAIL_FF>2364480</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>9443</LUT>
+                    <AVAIL_LUT>1182240</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_44_2_Push_pixel" OPTYPE="add" PRAGMA="" RTLNAME="empty_20_fu_344_p2" SOURCE="./CNN.h:44" URAM="0" VARIABLE="empty_20"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_44_2_Push_pixel" OPTYPE="add" PRAGMA="" RTLNAME="add_ln44_fu_356_p2" SOURCE="./CNN.h:44" URAM="0" VARIABLE="add_ln44"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_44_2_Push_pixel" OPTYPE="add" PRAGMA="" RTLNAME="add_ln44_9_fu_379_p2" SOURCE="./CNN.h:44" URAM="0" VARIABLE="add_ln44_9"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_44_2_Push_pixel" OPTYPE="add" PRAGMA="" RTLNAME="p_mid1_fu_405_p2" SOURCE="./CNN.h:44" URAM="0" VARIABLE="p_mid1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_44_2_Push_pixel" OPTYPE="add" PRAGMA="" RTLNAME="add_ln44_1_fu_437_p2" SOURCE="./CNN.h:44" URAM="0" VARIABLE="add_ln44_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_44_2_Push_pixel" OPTYPE="add" PRAGMA="" RTLNAME="add_ln44_2_fu_448_p2" SOURCE="./CNN.h:44" URAM="0" VARIABLE="add_ln44_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_44_2_Push_pixel" OPTYPE="add" PRAGMA="" RTLNAME="add_ln44_3_fu_459_p2" SOURCE="./CNN.h:44" URAM="0" VARIABLE="add_ln44_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_44_2_Push_pixel" OPTYPE="add" PRAGMA="" RTLNAME="add_ln44_4_fu_470_p2" SOURCE="./CNN.h:44" URAM="0" VARIABLE="add_ln44_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_44_2_Push_pixel" OPTYPE="add" PRAGMA="" RTLNAME="add_ln44_5_fu_481_p2" SOURCE="./CNN.h:44" URAM="0" VARIABLE="add_ln44_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_44_2_Push_pixel" OPTYPE="add" PRAGMA="" RTLNAME="add_ln44_6_fu_492_p2" SOURCE="./CNN.h:44" URAM="0" VARIABLE="add_ln44_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_44_2_Push_pixel" OPTYPE="add" PRAGMA="" RTLNAME="add_ln44_7_fu_503_p2" SOURCE="./CNN.h:44" URAM="0" VARIABLE="add_ln44_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_44_2_Push_pixel" OPTYPE="add" PRAGMA="" RTLNAME="add_ln44_8_fu_514_p2" SOURCE="./CNN.h:44" URAM="0" VARIABLE="add_ln44_8"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_44_2_Push_pixel" OPTYPE="add" PRAGMA="" RTLNAME="add_ln45_fu_560_p2" SOURCE="./CNN.h:45" URAM="0" VARIABLE="add_ln45"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="line_buffer_0_U" SOURCE="" URAM="0" VARIABLE="line_buffer_0"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="line_buffer_1_U" SOURCE="" URAM="0" VARIABLE="line_buffer_1"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="line_buffer_2_U" SOURCE="" URAM="0" VARIABLE="line_buffer_2"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="bias_conv1_U" SOURCE="" URAM="0" VARIABLE="bias_conv1"/>
+                <BindNode BINDTYPE="storage" BRAM="16" BUNDLEDNAME="" DISPNAME="bind_storage rom_np" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_np" PRAGMA="" RTLNAME="kernel_conv1_U" SOURCE="" URAM="0" VARIABLE="kernel_conv1"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>CNN_Pipeline_VITIS_LOOP_118_1_VITIS_LOOP_119_2_VITIS_LOOP_120_3</Name>
+            <Loops>
+                <VITIS_LOOP_118_1_VITIS_LOOP_119_2_VITIS_LOOP_120_3/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>6.66</TargetClockPeriod>
+                    <ClockUncertainty>1.80</ClockUncertainty>
+                    <EstimatedClockPeriod>4.279</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>undef</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_118_1_VITIS_LOOP_119_2_VITIS_LOOP_120_3>
+                        <Name>VITIS_LOOP_118_1_VITIS_LOOP_119_2_VITIS_LOOP_120_3</Name>
+                        <TripCount>undef</TripCount>
+                        <Latency>undef</Latency>
+                        <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>1</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_118_1_VITIS_LOOP_119_2_VITIS_LOOP_120_3>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>645</FF>
+                    <AVAIL_FF>2364480</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>1264</LUT>
+                    <AVAIL_LUT>1182240</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4320</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>6840</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_118_1_VITIS_LOOP_119_2_VITIS_LOOP_120_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln118_fu_179_p2" SOURCE="./CNN.h:118" URAM="0" VARIABLE="add_ln118"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_118_1_VITIS_LOOP_119_2_VITIS_LOOP_120_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_fu_231_p2" SOURCE="./CNN.h:119" URAM="0" VARIABLE="add_ln119"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_118_1_VITIS_LOOP_119_2_VITIS_LOOP_120_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln120_fu_292_p2" SOURCE="./CNN.h:120" URAM="0" VARIABLE="add_ln120"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_118_1_VITIS_LOOP_119_2_VITIS_LOOP_120_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_1_fu_298_p2" SOURCE="./CNN.h:119" URAM="0" VARIABLE="add_ln119_1"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>convolution_double_double_double_double_14_14_16_8_14_14_3_3_1_1_s</Name>
+            <Loops>
+                <VITIS_LOOP_46_3/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>6.66</TargetClockPeriod>
+                    <ClockUncertainty>1.80</ClockUncertainty>
+                    <EstimatedClockPeriod>1.428</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>undef</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_46_3>
+                        <Name>VITIS_LOOP_46_3</Name>
+                        <TripCount>16</TripCount>
+                        <Latency>17</Latency>
+                        <AbsoluteTimeLatency>0.113 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>2</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_46_3>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4320</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <FF>140</FF>
+                    <AVAIL_FF>2364480</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>176</LUT>
+                    <AVAIL_LUT>1182240</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>6840</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_46_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln46_fu_83_p2" SOURCE="./CNN.h:46" URAM="0" VARIABLE="add_ln46"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="line_buffer_2_1_U" SOURCE="" URAM="0" VARIABLE="line_buffer_2_1"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="line_buffer_1_1_U" SOURCE="" URAM="0" VARIABLE="line_buffer_1_1"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>CNN</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>6.66</TargetClockPeriod>
+                    <ClockUncertainty>1.80</ClockUncertainty>
+                    <EstimatedClockPeriod>4.503</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>undef</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>16</BRAM_18K>
+                    <AVAIL_BRAM>4320</AVAIL_BRAM>
+                    <UTIL_BRAM>~0</UTIL_BRAM>
+                    <DSP>105</DSP>
+                    <AVAIL_DSP>6840</AVAIL_DSP>
+                    <UTIL_DSP>1</UTIL_DSP>
+                    <FF>11704</FF>
+                    <AVAIL_FF>2364480</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>11212</LUT>
+                    <AVAIL_LUT>1182240</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln118_fu_152_p2" SOURCE="./CNN.h:118" URAM="0" VARIABLE="add_ln118"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln118_1_fu_187_p2" SOURCE="./CNN.h:118" URAM="0" VARIABLE="add_ln118_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32ns_32ns_126_1_1_U64" SOURCE="./CNN.h:118" URAM="0" VARIABLE="bound"/>
+            </BindNodes>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation/>
+    <UserConfigCommands/>
+    <Args>
+        <Arg ArgName="padding" index="0" direction="in" srcType="int" srcSize="32">
+            <hwRefs>
+                <hwRef type="port" interface="padding" name="padding" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="width" index="1" direction="in" srcType="int" srcSize="32">
+            <hwRefs>
+                <hwRef type="port" interface="width" name="width" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="hight" index="2" direction="in" srcType="int" srcSize="32">
+            <hwRefs>
+                <hwRef type="port" interface="hight" name="hight" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="image" index="3" direction="in" srcType="double*" srcSize="64">
+            <hwRefs>
+                <hwRef type="port" interface="image_r" name="image_r" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="output_conv1" index="4" direction="inout" srcType="double*" srcSize="64">
+            <hwRefs>
+                <hwRef type="port" interface="output_conv1_i" name="output_conv1_i" usage="data" direction="in"/>
+                <hwRef type="port" interface="output_conv1_o" name="output_conv1_o" usage="data" direction="out"/>
+                <hwRef type="port" interface="output_conv1_o_ap_vld" name="output_conv1_o_ap_vld" usage="control" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="output_pooling1" index="5" direction="inout" srcType="double*" srcSize="64">
+            <hwRefs>
+                <hwRef type="port" interface="output_pooling1" name="output_pooling1" usage="data" direction="out"/>
+                <hwRef type="port" interface="output_pooling1_ap_vld" name="output_pooling1_ap_vld" usage="control" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="output_conv2" index="6" direction="out" srcType="double*" srcSize="64">
+            <hwRefs>
+                <hwRef type="port" interface="output_conv2" name="output_conv2" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_HIGH</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_ctrl" type="ap_ctrl" busTypeName="acc_handshake" mode="slave">
+            <portMaps>
+                <portMap portMapName="ap_start">start</portMap>
+                <portMap portMapName="ap_done">done</portMap>
+                <portMap portMapName="ap_idle">idle</portMap>
+                <portMap portMapName="ap_ready">ready</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_done</port>
+                <port>ap_idle</port>
+                <port>ap_ready</port>
+                <port>ap_start</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="padding" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="padding">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>padding</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="padding"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="width" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="width">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>width</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="width"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="hight" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="hight">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>hight</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="hight"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="image_r" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="image_r">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>image_r</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="image"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="output_conv1_i" type="data" busTypeName="data" protocol="ap_ovld" mode="slave" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="output_conv1_i">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>output_conv1_i</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="output_conv1"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="output_conv1_o" type="data" busTypeName="data" protocol="ap_ovld" mode="master" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="output_conv1_o">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>output_conv1_o</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="output_conv1"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="output_pooling1" type="data" busTypeName="data" protocol="ap_vld" mode="master" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="output_pooling1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>output_pooling1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="output_pooling1"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="output_conv2" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="output_conv2">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>output_conv2</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="output_conv2"/>
+            </constraints>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="REGISTER">
+                <table isCollapsed="0">
+                    <keys size="3">Interface, Mode, Bitwidth</keys>
+                    <column name="hight">ap_none, 32</column>
+                    <column name="image_r">ap_none, 64</column>
+                    <column name="output_conv1_i">ap_none, 64</column>
+                    <column name="output_conv1_o">ap_none, 64</column>
+                    <column name="output_conv2">ap_none, 64</column>
+                    <column name="output_pooling1">ap_none, 64</column>
+                    <column name="padding">ap_none, 32</column>
+                    <column name="width">ap_none, 32</column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table isCollapsed="0">
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk</column>
+                    <column name="ap_rst">reset, ap_rst</column>
+                    <column name="ap_ctrl">ap_ctrl_hs, ap_done ap_idle ap_ready ap_start</column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="padding">in, int</column>
+                    <column name="width">in, int</column>
+                    <column name="hight">in, int</column>
+                    <column name="image">in, double*</column>
+                    <column name="output_conv1">inout, double*</column>
+                    <column name="output_pooling1">inout, double*</column>
+                    <column name="output_conv2">out, double*</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, HW Interface, HW Type</keys>
+                    <column name="padding">padding, port</column>
+                    <column name="width">width, port</column>
+                    <column name="hight">hight, port</column>
+                    <column name="image">image_r, port</column>
+                    <column name="output_conv1">output_conv1_i, port</column>
+                    <column name="output_conv1">output_conv1_o, port</column>
+                    <column name="output_conv1">output_conv1_o_ap_vld, port</column>
+                    <column name="output_pooling1">output_pooling1, port</column>
+                    <column name="output_pooling1">output_pooling1_ap_vld, port</column>
+                    <column name="output_conv2">output_conv2, port</column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <ReportBurst>
+        <section name="M_AXI Burst Information" level="0" HEADER_NOTE="Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings."/>
+    </ReportBurst>
+    <PragmaReport/>
+</profile>
+
