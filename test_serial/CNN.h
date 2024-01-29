@@ -144,7 +144,7 @@ template <typename DATA_IN_TYPE,
           int UPSAMPLING_FACTOR_X,
           int UPSAMPLING_FACTOR_Y>
 static void upsampling(int width, int height, DATA_IN_TYPE* input, DATA_OUT_TYPE* output) {
-    DATA_IN_TYPE upsam_buf[UPSAMPLING_FACTOR_Y * width];
+    DATA_IN_TYPE upsam_buf[2* 28];
     for (int num_channel = 0; num_channel < NUM_CHANNEL; num_channel++) {
         for (int i = 0; i < UPSAMPLING_FACTOR_X * height; i++) {
             for (int j = 0; j < UPSAMPLING_FACTOR_Y * width; j++) {

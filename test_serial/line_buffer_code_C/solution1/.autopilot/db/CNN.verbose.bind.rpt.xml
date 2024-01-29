@@ -1,0 +1,70 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'CNN'" level="0">
+<item name = "Date">Mon Jan 29 21:01:23 2024
+</item>
+<item name = "Version">2019.2 (Build 2708876 on Wed Nov 06 22:05:07 MST 2019)</item>
+<item name = "Project">line_buffer_code_C</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcvu9p-flga2104-2-i</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">6.66 ns, 4.503 ns, 1.80 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">32347, ?, 0.215 ms, ?, 32347, ?, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_convolution_double_double_double_double_4_4_8_8_4_4_3_3_1_1_s_fu_552">convolution_double_double_double_double_4_4_8_8_4_4_3_3_1_1_s, 1922, ?, 12.801 us, ?, 1922, ?, none</column>
+<column name="grp_convolution_double_double_double_double_16_16_8_16_14_14_3_3_1_0_s_fu_589">convolution_double_double_double_double_16_16_8_16_14_14_3_3_1_0_s, 10242, ?, 68.212 us, ?, 10242, ?, none</column>
+<column name="grp_convolution_double_double_double_double_14_14_16_8_14_14_3_3_1_1_s_fu_608">convolution_double_double_double_double_14_14_16_8_14_14_3_3_1_1_s, 10242, ?, 68.212 us, ?, 10242, ?, none</column>
+<column name="grp_convolution_double_double_double_double_8_8_8_8_8_8_3_3_1_1_s_fu_627">convolution_double_double_double_double_8_8_8_8_8_8_3_3_1_1_s, 3202, ?, 21.325 us, ?, 3202, ?, none</column>
+<column name="grp_convolution_double_double_double_double_7_7_8_8_7_7_3_3_1_1_s_fu_646">convolution_double_double_double_double_7_7_8_8_7_7_3_3_1_1_s, 2882, ?, 19.194 us, ?, 2882, ?, none</column>
+<column name="grp_convolution_double_double_double_double_28_28_1_16_28_28_3_3_1_1_s_fu_665">convolution_double_double_double_double_28_28_1_16_28_28_3_3_1_1_s, 1921, ?, 12.794 us, ?, 1921, ?, none</column>
+<column name="grp_convolution_double_double_double_double_28_28_16_1_28_28_3_3_1_0_s_fu_684">convolution_double_double_double_double_28_28_16_1_28_28_3_3_1_0_s, 1793, ?, 11.941 us, ?, 1793, ?, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">32, ?, 2 ~ ?, -, -, 16, no</column>
+<column name=" + Loop 1.1">2, ?, 2 ~ ?, -, -, 1 ~ ?, no</column>
+<column name="  ++ Loop 1.1.1">1, ?, 2, 1, 1, 1 ~ ?, yes</column>
+<column name="- Loop 2">16, ?, 2 ~ ?, -, -, 8, no</column>
+<column name=" + Loop 2.1">2, ?, 2 ~ ?, -, -, 1 ~ ?, no</column>
+<column name="  ++ Loop 2.1.1">1, ?, 2, 1, 1, 1 ~ ?, yes</column>
+<column name="- Loop 3">16, ?, 2 ~ ?, -, -, 8, no</column>
+<column name=" + Loop 3.1">2, ?, 2 ~ ?, -, -, 1 ~ ?, no</column>
+<column name="  ++ Loop 3.1.1">1, ?, 2, 1, 1, 1 ~ ?, yes</column>
+<column name="- Loop 4">16, ?, 2 ~ ?, -, -, 8, no</column>
+<column name=" + Loop 4.1">2, ?, 2 ~ ?, -, -, 1 ~ ?, no</column>
+<column name="  ++ Loop 4.1.1">1, ?, 1, 1, 1, 1 ~ ?, yes</column>
+<column name="- Loop 5">16, ?, 2 ~ ?, -, -, 8, no</column>
+<column name=" + Loop 5.1">2, ?, 2 ~ ?, -, -, 1 ~ ?, no</column>
+<column name="  ++ Loop 5.1.1">1, ?, 1, 1, 1, 1 ~ ?, yes</column>
+<column name="- Loop 6">28, ?, 2 ~ ?, -, -, 14, no</column>
+<column name=" + Loop 6.1">2, ?, 2 ~ ?, -, -, 1 ~ ?, no</column>
+<column name="  ++ Loop 6.1.1">1, ?, 1, 1, 1, 1 ~ ?, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

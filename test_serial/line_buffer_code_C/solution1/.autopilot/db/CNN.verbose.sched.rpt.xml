@@ -1,0 +1,63 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'CNN'" level="0">
+<item name = "Date">Mon Jan 29 21:01:22 2024
+</item>
+<item name = "Version">2019.2 (Build 2708876 on Wed Nov 06 22:05:07 MST 2019)</item>
+<item name = "Project">line_buffer_code_C</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcvu9p-flga2104-2-i</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">6.66 ns, 4.503 ns, 1.80 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">32347, ?, 0.215 ms, ?, 32347, ?, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">32, ?, 2 ~ ?, -, -, 16, no</column>
+<column name=" + Loop 1.1">2, ?, 2 ~ ?, -, -, 1 ~ ?, no</column>
+<column name="  ++ Loop 1.1.1">1, ?, 2, 1, 1, 1 ~ ?, yes</column>
+<column name="- Loop 2">16, ?, 2 ~ ?, -, -, 8, no</column>
+<column name=" + Loop 2.1">2, ?, 2 ~ ?, -, -, 1 ~ ?, no</column>
+<column name="  ++ Loop 2.1.1">1, ?, 2, 1, 1, 1 ~ ?, yes</column>
+<column name="- Loop 3">16, ?, 2 ~ ?, -, -, 8, no</column>
+<column name=" + Loop 3.1">2, ?, 2 ~ ?, -, -, 1 ~ ?, no</column>
+<column name="  ++ Loop 3.1.1">1, ?, 2, 1, 1, 1 ~ ?, yes</column>
+<column name="- Loop 4">16, ?, 2 ~ ?, -, -, 8, no</column>
+<column name=" + Loop 4.1">2, ?, 2 ~ ?, -, -, 1 ~ ?, no</column>
+<column name="  ++ Loop 4.1.1">1, ?, 1, 1, 1, 1 ~ ?, yes</column>
+<column name="- Loop 5">16, ?, 2 ~ ?, -, -, 8, no</column>
+<column name=" + Loop 5.1">2, ?, 2 ~ ?, -, -, 1 ~ ?, no</column>
+<column name="  ++ Loop 5.1.1">1, ?, 1, 1, 1, 1 ~ ?, yes</column>
+<column name="- Loop 6">28, ?, 2 ~ ?, -, -, 14, no</column>
+<column name=" + Loop 6.1">2, ?, 2 ~ ?, -, -, 1 ~ ?, no</column>
+<column name="  ++ Loop 6.1.1">1, ?, 1, 1, 1, 1 ~ ?, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

@@ -40,7 +40,7 @@ set Interface "wire"
 set DataType "int"
 set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
 lappend PortList $Port
-set PortName "image_r"
+set PortName "image"
 set BitWidth "64"
 set ArrayOpt ""
 set Const "0"
